@@ -27,14 +27,14 @@ hr {
 }
 
 a, .navClickable {
-  color: #FFB300;
+  color: #195319;
   text-decoration: none;
 }
 
 a:hover, .hideButton:hover, .unhideButton:hover, .embedButton:hover,
   .navClickable:hover, #closeWatcherMenuButton:hover, .watchButton:hover,
   .watchedCellCloseButton:hover, .hideFileButton:hover {
-  text-shadow: 0px 0px 5px #117743;
+  color: red;
 }
 
 .navClickable, .watchButton {
@@ -57,29 +57,25 @@ em {
   font-style: italic;
 }
 
+input[type="text"], input[type="password"], textarea {
+  border: 1px solid #a9a9a9;
+}
+
 input, select, textarea {
-  border: 1px double #07371F;
-  border-radius: 5px;
-  background: #282A2E;
-  color: #ACACAC;
-  font-family: 'Hack', monospace, sans-serif;
-  font-size: 80%;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  word-spacing: normal;
+  font-size: inherit;
+  font-family: sans-serif;
 }
 
 input[type=button], input[type=submit], button, .dropzone, .selectedCell {
-  border: 3px double #07371F;
-  border-radius: 5px;
-  background: #16171A;
-  color: #ACACAC;
-  padding-left: 0.25em;
-  font-family: 'Hack', monospace, sans-serif;
-  font-size: 80%;
-  font-weight: bold;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 
-.title, .unhideButton {
+.title {
   font-weight: bold;
 }
 
@@ -88,18 +84,6 @@ input[type=button], input[type=submit], button, .dropzone, .selectedCell {
 }
 
 /* import resources here; external CSS, fonts, etc */
-@font-face {
-  font-family: 'Hack';
-  src: url('../hack-regular-webfont.eot?v=2.018');
-  src: url('../hack-regular-webfont.eot?#iefix&v=2.018')
-    format('embedded-opentype'), url('../hack-regular-webfont.woff2?v=2.018')
-    format('woff2'), url('../hack-regular-webfont.woff?v=2.018') format('woff'),
-    url('../hack-regular-webfont.ttf?v=2.018') format('truetype'),
-    url('../hack-regular-webfont.svg?v=2.018#hackregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 @font-face {
   font-family: 'Icons';
   src: url('../open-iconic.eot');
@@ -113,11 +97,12 @@ input[type=button], input[type=submit], button, .dropzone, .selectedCell {
 
 /* body styles, inherited by whole page */
 body {
-  color: #ACACAC;
-  background: #1D1F21;
-  font-family: 'Hack', monospace, sans-serif;
-  font-size: 100%;
+  background-image: url('/.static/jungle_bg1.png'), url('/.static/jungle_bg.png');
+  background-repeat: repeat-x, repeat;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 10pt;
   margin: 0px;
+  color: #242B23;
 }
 
 /* header and nav / top of page styles */
@@ -131,11 +116,16 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #151515;
-  border-bottom: 1px solid #B0790A;
+  background-color: #B3C87F;
+  border-bottom: 1px solid;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
   padding-bottom: 3px;
-  font-size: 70%;
+  font-size: 80%;
   text-align: center;
+}
+
+nav:hover {
+  background-color: #CADC9D;
 }
 
 nav span, nav a {

@@ -3,7 +3,7 @@
   .watchedCellCloseButton, .hideFileButton {
   margin-left: 0.5em;
   cursor: pointer;
-  color: #FFB300;
+  color: #34345C;
 }
 
 .reportFieldset {
@@ -20,10 +20,10 @@
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.unhideButton {
+.unhideButton, .linkReply, .linkPreview, .hideFileButton {
   cursor: pointer;
-  color: #FFB300;
-  font-size: 80%;
+  color: #34345C;
+  text-decoration: underline;
 }
 
 .hideButton::before {
@@ -45,7 +45,7 @@
 
 .postInfo, .opHead, .divMessage, .panelUploads, .panelIp, .panelProxyIp,
   .contentOmissionIndicator, .labelOmission, .labelId {
-  font-size: 80%;
+  font-size: 13px;
 }
 
 .divPosts {
@@ -57,14 +57,14 @@
 }
 
 .innerPost, .markedPost {
-  background: #282A2E;
+  background-image: url('/.static/jungle_td.png');
   display: inline-block;
   overflow: hidden;
   padding-right: 0.5em;
   padding-left: 0.25em;
   padding-top: 0.25em;
   max-width: 100%;
-  border: 1px solid #117743;
+  border: 2px solid #E5D959;
   border-radius: 5px;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .noEmailName, .noEmailName:hover {
-  color: #117743;
+  color: maroon;
   text-shadow: none;
 }
 
@@ -90,18 +90,8 @@
   color: #ff0000;
 }
 
-.linkSelf {
-  color: #ACACAC;
-  text-decoration: none;
-}
-
 .linkSelf:hover {
   color: #AA0000;
-}
-
-.linkQuote {
-  color: #ACACAC;
-  text-decoration: none;
 }
 
 .linkQuote:hover {
@@ -218,8 +208,12 @@
 }
 
 /*Board header*/
-.boardHeader p {
-  color: #663E11;
+.boardHeader h1 {
+  color: #054500;
+  font-family: tahoma;
+  letter-spacing: -2px;
+  font-size: 20pt;
+  margin: 0;
 }
 
 .boardHeader p#labelName {
@@ -227,7 +221,8 @@
 }
 
 .boardHeader p#labelDescription {
-  font-size: 100%;
+  font-size: 8pt;
+  color: #054500;
 }
 
 .boardHeader a {
