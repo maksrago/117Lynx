@@ -33,7 +33,7 @@
 
 .hideMenu, #watchedMenu {
   border: 1px dashed #117743;
-  background: #1d1f21;
+  background-image: url('/.static/jungle_td.png');
   padding: 0.25em;
 }
 

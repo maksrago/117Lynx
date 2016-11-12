@@ -70,11 +70,6 @@ input, select, textarea {
   font-family: sans-serif;
 }
 
-input[type=button], input[type=submit], button, .dropzone, .selectedCell {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
 .title {
   font-weight: bold;
 }

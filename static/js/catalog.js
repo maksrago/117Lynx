@@ -1,6 +1,6 @@
 if (!DISABLE_JS) {
 
-  var postingForm = document.getElementById('newPostFieldset');
+  var postingForm = document.getElementById('postingForm');
 
   if (postingForm) {
 

@@ -1,9 +1,38 @@
+#postingFormWrapper {
+  text-align: center;
+  width: 100%;
+}
+
+#postingForm {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+#postingForm td {
+  text-align: left;
+}
+
+#postingForm th {
+  width: 85px;
+  background: #65AB6B;
+  border: 1px solid #054500;
+  font-weight: 600;
+  text-align: left;
+  padding: 4px;
+}
+
 /*Elements shown on board and thread pages*/
 .selectedCell, .dropzone {
   top: 5px;
   text-align: center;
   margin-bottom: 5px;
   padding: 5px 0px;
+  border: 2px dashed rgba(125, 125, 125, 0.4);
+}
+
+#dragAndDropDiv {
+  background-color: rgba(200, 200, 200, 0.5);
 }
 
 .selectedCell {
@@ -32,17 +61,8 @@
   color: #7D7D7D;
 }
 
-#panelMessage {
-  margin: 1em;
-}
-
-#postBox div.wider input, #flagsDiv, #flagsDiv select {
+#flagsDiv, #flagsDiv select {
   width: 100%;
-  margin-bottom: 0.25em;
-}
-
-#flagsDiv {
-  margin-top: 0.5em;
 }
 
 #postBox textarea {
@@ -60,13 +80,8 @@
   width: 25em;
 }
 
-#newPostFieldset, #quick-reply table {
+#quick-reply table {
   border: 1px dashed #117743;
-}
-
-#postingForm {
-  text-align: center;
-  margin: 1em auto;
 }
 
 #postBox {
@@ -77,7 +92,7 @@
   margin-top: 0.5em;
 }
 
-#postingForm button, #qrbutton {
+#qrbutton {
   width: 8em;
   margin: 0.5em auto;
 }

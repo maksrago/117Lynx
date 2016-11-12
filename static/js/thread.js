@@ -21,7 +21,7 @@ var unreadPosts = 0;
 var originalTitle = document.title;
 var lastPost;
 
-var postCellTemplate = '<div class="innerPost"><div class="postInfo title">'
+var postCellTemplate = '<div class="innerPost"><div class="postInfo">'
     + '<input type="checkbox" class="deletionCheckBox"> <span class="labelSubject">'
     + '</span> <a class="linkName"></a> <img class="imgFlag"> <span class="labelRole">'
     + '</span> <span class="labelCreated"></span> <span class="spanId"> Id: <span '

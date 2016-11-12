@@ -106,12 +106,11 @@
   display: inline-block;
   overflow: hidden;
   padding: 0.5em;
-  background: #282A2E;
+  background-image: url('/.static/jungle_td.png');
   margin: 0.5em;
   max-width: 15%;
   max-height: 8em;
-  font-size: 75%;
-  border: 1px solid #117743;
+  border: 2px solid #E5D959;
   border-radius: 5px;
   vertical-align: middle;
 }
@@ -135,6 +134,5 @@
 #divLatestImages img {
   max-width: 100%;
   padding: 5px;
-  background: #282A2E;
   border-radius: 5px;
 }
