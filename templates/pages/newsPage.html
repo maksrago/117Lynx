@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0">
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="/.static/css/global.css">
+</head>
+<body>
+
+  <nav>
+    <span id="navLinkSpan"> <span>[</span> <a
+        href="/"
+        id="navLinkHome">home</a> <span>/</span> <a
+        href="/boards.js"
+        id="navBoardList">boards</a> <span>/</span> <a
+        href="/overboard"
+        id="navOverboard">overboard</a> <span>/</span> <a
+        href="/.static/posting.html"
+        id="navPosting">help</a> <span>]</span>
+    </span> <span id="navBoardsSpan"> </span> <span id="navOptionsSpan"> </span>
+  </nav>
+
+  <header>
+    <img
+      src="/.static/logo.png"
+      alt="logo" />
+  </header>
+
+  <div id="settingsWrapper">
+
+    <fieldset id="settingsFieldset">
+
+      <legend>News</legend>
+      <h3>New entry</h3>
+      <form
+        action="/addon.js/news"
+        method="get">
+        <h3>Create entry</h3>
+        <input
+          type="hidden"
+          name="action"
+          value="create">
+
+        <input
+          type="text"
+          name="title"
+          placeholder="Title">
+        <br>
+        <textarea
+          name="content"
+          placeholder="Content"></textarea>
+        <br>
+        <button type="submit">Create</button>
+      </form>
+      <hr>
+      <h3>Existing entries</h3>
+      <div id="newsDiv"></div>
+
+    </fieldset>
+
+  </div>
+
+</body>
+
+<script src="/.static/js/settings.js"></script>
+<script src="/.static/js/api.js"></script>
+<script src="/.static/js/languages.js"></script>
+<script src="/.static/js/themes.js"></script>
+
+</html>

@@ -73,5 +73,8 @@
   "spoiler": "images/spoiler.png",
   "thumb": "../static/logo.png",
   "maintenanceImage": "images/maintenanceImage.png",
-  "socketManagementPage": "pages/socket.html"
+  "socketManagementPage": "pages/socket.html",
+  "newsPage": "pages/newsPage.html",
+  "newManagementCell": "cells/newManagementCell.html",
+  "newDisplayCell": "cells/newDisplayCell.html"
 }
