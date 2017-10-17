@@ -26,3 +26,6 @@
 .contentAction label, .contentAction img {
   display: block;
 }
+.contentAction img {
+    height: 50px;
+}

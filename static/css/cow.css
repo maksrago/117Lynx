@@ -1,0 +1,209 @@
+/* COW.css */
+/* Mostly copypasted from /cow/s stylesheets, plus some other resources */
+@import '/.static/css/yotsuba_b.css';
+body {
+    background: #330000;
+    background:-moz-linear-gradient(top,#ff0000,#330000 180px);
+    background:-webkit-gradient(linear,0 0,0 80,from(#ff0000),to(#330000));
+    background: linear-gradient(to bottom,#FF0000,#330000 180px);
+    background-attachment: local;
+    height: 100%;
+    color: #d8d8d8;
+}
+
+a {
+    text-decoration:none;
+    color:#f8c20f;
+}
+
+a[href$="mailto:sage"] {
+    text-decoration: underline;
+}
+
+a:link, a:visited, p.intro a.email span.name {
+    color: #f8c20f;
+}
+
+a:link:hover{
+    color:#784818;
+}
+/* THREAD POSTS */
+.innerPost {
+	background-color: #333;
+	border-color: #222;
+}
+
+.markedPost {
+	background-color: #555555 !important;
+}
+
+hr {
+    border-color: #222;
+}
+
+nav {
+	background-color: #F80000;
+	border-bottom: 1px solid #F80000;
+	color: #8899AA;
+	font-size: 12px;margin: 0 0.2em;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+/* THREAD FIELDS */
+.title, .unhideButton {
+	font-weight: 400;
+}
+.labelSubject {
+	color: #D70000;
+	font-weight: bold;
+}
+.linkName {
+	font-weight: bold;
+	color: #F8C20F;
+	text-decoration: underline;
+}
+.linkName:hover {
+	color: #DD0000;
+}
+.noEmailName, .noEmailName:hover {
+	color: #F8C20F;
+	text-decoration: none;
+	text-shadow: none;
+}
+.linkSelf, .linkQuote {
+	color: #F8C20F;
+}
+.linkSelf:hover, .linkQuote:hover {
+	color: #DD0000;
+}
+.panelBacklinks a {
+	color: #F8C20F;
+}
+.panelBacklinks a:hover {
+	color: #DD0000;
+}
+.quoteLink, .quoteLink:hover {
+	color: #D00D00;
+	text-decoration: underline;
+}
+.labelRole:before {
+	font-size: 10px;
+}
+.labelOmission {
+	color: #707070;
+}
+.labelLastEdit {
+	font-size: 10px;
+}
+.labelId {
+	font-size: 12px;
+}
+
+/* misc trash */
+
+.divMessage {
+  color: #d8d8d8;
+}
+
+#labelName, #labelDescription {
+ color: #F8C20F; 
+ /* color: rgba(248,194,15,0) !important; same yellow color made transparent */
+ text-shadow: 0px 0px 0.8em #F00, 0px 0px 0.8em #F00; 
+ /* text-shadow: 0px 0px 0.8em rgba(255,0,0,0), 0px 0px 0.8em rgba(255,0,0,0); same red color made transparent */
+ /* font-size: 0pt !important; also causes the favstar to disappear */
+}
+
+.labelCreated {
+  color: #d8d8d8;
+}
+
+.hideFileButton {
+  color: #F8C20F;
+}
+
+.sizeLabel {
+  color: #d8d8d8;
+}
+.uploadDetails {
+  color: #d8d8d8;
+}
+
+/* QUICK REPLY */
+#quick-reply table {
+	background-color: #333333;
+	border: 1px solid #333333;
+}
+#quick-reply table {
+	padding: 0em;
+}
+#quick-reply th {
+	background-color: #333333;
+}
+
+#watcherButton {
+  color: #f8c20f;
+}
+
+#postingForm th {
+  background-color: #333333;
+  color: #d8d8d8;
+}
+
+#postingForm td {
+  background-color: transparent;
+}
+
+/* lazy */
+.markedPost {
+  background-color: #555555 !important;
+  border-color: #222;
+}
+
+/* JULAAAAAAAAAAAAAAY */
+.redText, a.rules {
+    animation: rainbold 1s linear infinite;
+    color: red;
+    font-size: 1.5em;
+/*  letter-spacing: 0.33em; */
+    margin-left: 6px;
+    text-shadow: -1px 0px orange, -2px 0px yellow, -3px 0px green, -4px 0px blue, -5px 0px indigo, -6px 0px violet;
+
+}
+
+@keyframes rainbold {
+    0% { color: red; text-shadow: -1px 0px orange, -2px 0px yellow, -3px 0px green, -4px 0px blue, -5px 0px indigo, -6px 0px violet; }
+  14% { color: orange; text-shadow: -1px 0px yellow, -2px 0px green, -3px 0px blue, -4px 0px indigo, -5px 0px violet, -6px 0px red; }
+  28% { color: yellow; text-shadow: -1px 0px green, -2px 0px blue, -3px 0px indigo, -4px 0px violet, -5px 0px red, -6px 0px orange; }
+  43% { color: green; text-shadow: -1px 0px blue, -2px 0px indigo, -3px 0px violet, -4px 0px red, -5px 0px orange, -6px 0px yellow; }
+  57% { color: blue; text-shadow: -1px 0px indigo, -2px 0px violet, -3px 0px red, -4px 0px orange, -5px 0px yellow, -6px 0px green; }
+  71% { color: indigo; text-shadow: -1px 0px violet, -2px 0px red, -3px 0px orange, -4px 0px yellow, -5px 0px green, -6px 0px blue; }
+  85% { color: violet; text-shadow: -1px 0px red, -2px 0px orange, -3px 0px yellow, -4px 0px green, -5px 0px blue, -6px 0px indigo; }
+ 100% { color: red; text-shadow: -1px 0px orange, -2px 0px yellow, -3px 0px green, -4px 0px blue, -5px 0px indigo, -6px 0px violet; }
+}
+
+@-moz-keyframes rainbold {
+    0% { color: red; text-shadow: -1px 0px orange, -2px 0px yellow, -3px 0px green, -4px 0px blue, -5px 0px indigo, -6px 0px violet; }
+  14% { color: orange; text-shadow: -1px 0px yellow, -2px 0px green, -3px 0px blue, -4px 0px indigo, -5px 0px violet, -6px 0px red; }
+  28% { color: yellow; text-shadow: -1px 0px green, -2px 0px blue, -3px 0px indigo, -4px 0px violet, -5px 0px red, -6px 0px orange; }
+  43% { color: green; text-shadow: -1px 0px blue, -2px 0px indigo, -3px 0px violet, -4px 0px red, -5px 0px orange, -6px 0px yellow; }
+  57% { color: blue; text-shadow: -1px 0px indigo, -2px 0px violet, -3px 0px red, -4px 0px orange, -5px 0px yellow, -6px 0px green; }
+  71% { color: indigo; text-shadow: -1px 0px violet, -2px 0px red, -3px 0px orange, -4px 0px yellow, -5px 0px green, -6px 0px blue; }
+  85% { color: violet; text-shadow: -1px 0px red, -2px 0px orange, -3px 0px yellow, -4px 0px green, -5px 0px blue, -6px 0px indigo; }
+ 100% { color: red; text-shadow: -1px 0px orange, -2px 0px yellow, -3px 0px green, -4px 0px blue, -5px 0px indigo, -6px 0px violet; }
+}
+
+@-webkit-keyframes rainbold {
+    0% { color: red; text-shadow: -1px 0px orange, -2px 0px yellow, -3px 0px green, -4px 0px blue, -5px 0px indigo, -6px 0px violet; }
+  14% { color: orange; text-shadow: -1px 0px yellow, -2px 0px green, -3px 0px blue, -4px 0px indigo, -5px 0px violet, -6px 0px red; }
+  28% { color: yellow; text-shadow: -1px 0px green, -2px 0px blue, -3px 0px indigo, -4px 0px violet, -5px 0px red, -6px 0px orange; }
+  43% { color: green; text-shadow: -1px 0px blue, -2px 0px indigo, -3px 0px violet, -4px 0px red, -5px 0px orange, -6px 0px yellow; }
+  57% { color: blue; text-shadow: -1px 0px indigo, -2px 0px violet, -3px 0px red, -4px 0px orange, -5px 0px yellow, -6px 0px green; }
+  71% { color: indigo; text-shadow: -1px 0px violet, -2px 0px red, -3px 0px orange, -4px 0px yellow, -5px 0px green, -6px 0px blue; }
+  85% { color: violet; text-shadow: -1px 0px red, -2px 0px orange, -3px 0px yellow, -4px 0px green, -5px 0px blue, -6px 0px indigo; }
+ 100% { color: red; text-shadow: -1px 0px orange, -2px 0px yellow, -3px 0px green, -4px 0px blue, -5px 0px indigo, -6px 0px violet; }
+}
+#divLatestPosts .latestPostCell {
+	background-color: transparent;
+	border: 0px;
+}

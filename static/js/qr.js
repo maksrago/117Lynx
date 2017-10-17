@@ -191,11 +191,6 @@ function setQr() {
     qrhtml += 'Don\'t show location</label></td></tr>';
   }
 
-  qrhtml += '<tr><td class="centered" colspan="2"><input type="checkbox" ';
-  qrhtml += 'id="qralwaysUseBypassCheckBox" class="postingCheckbox">';
-  qrhtml += '<label for="qralwaysUseBypassCheckBox" class="spoilerCheckbox">';
-  qrhtml += 'Make sure I have a block bypass</label></td></tr>';
-
   if (flags) {
     qrhtml += '<tr><td colspan="2"><div id="qrFlagsDiv"></div></td></tr>';
   }
@@ -243,8 +238,6 @@ function setQr() {
   registerSync('fieldSubject', 'qrsubject', 'value', 'input');
   registerSync('fieldMessage', 'qrbody', 'value', 'input');
   registerSync('fieldPostingPassword', 'qrpassword', 'value', 'input');
-  registerSync('alwaysUseBypassCheckBox', 'qralwaysUseBypassCheckBox',
-      'checked', 'change');
 
   if (noFlagDiv) {
     registerSync('checkboxNoFlag', 'qrcheckboxNoFlag', 'checked', 'change');

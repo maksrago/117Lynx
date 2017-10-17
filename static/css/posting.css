@@ -1,18 +1,14 @@
 /*Used for places where posts are displayed*/
-.hideButton, .embedButton, #closeWatcherMenuButton, .watchButton,
-  .watchedCellCloseButton, .hideFileButton {
-  margin-left: 0.5em;
-  cursor: pointer;
-  color: #FFB300;
-}
 
 .imgExpanded {
   max-width: 100%;
+  max-height: 100%;
+  float: none;
 }
 
 .reportFieldset {
   margin-top: 1em;
-  border: 1px dashed #117743;
+  border: 1px dashed #193447;
   padding: 0.5em;
   margin-bottom: 1em;
 }
@@ -35,12 +31,6 @@
   content: '\e017';
 }
 
-.hideMenu, #watchedMenu {
-  border: 1px dashed #117743;
-  background: #1d1f21;
-  padding: 0.25em;
-}
-
 .hideMenu label {
   display: block;
   font-size: 80%;
@@ -49,7 +39,7 @@
 
 .postInfo, .opHead, .divMessage, .panelUploads, .panelIp, .panelProxyIp,
   .contentOmissionIndicator, .labelOmission, .labelId {
-  font-size: 80%;
+  font-size: 12px;
 }
 
 .divPosts {
@@ -61,71 +51,28 @@
 }
 
 .innerPost, .markedPost {
-  background: #282A2E;
+
   display: inline-block;
   overflow: hidden;
   padding-right: 0.5em;
   padding-left: 0.25em;
   padding-top: 0.25em;
   max-width: 100%;
-  border: 1px solid #117743;
-  border-radius: 5px;
+  border: 0;
+  box-shadow: 0px 3px 14px -5px #000000;
 }
 
-.markedPost {
-  background: rgba(59, 22, 43, 0.4);
-}
-
-.linkName {
-  font-weight: bold;
-  color: #34ED97;
-}
-
-.linkName:hover {
-  color: #AA0000;
-}
-
-.noEmailName, .noEmailName:hover {
-  color: #117743;
-  text-shadow: none;
-}
-
-.quoteLink {
-  color: #ff0000;
-}
-
-.linkSelf {
-  color: #ACACAC;
+.linkSelf, .linkQuote, .linkPreview {
   text-decoration: none;
-}
-
-.linkSelf:hover {
-  color: #AA0000;
-}
-
-.linkQuote {
-  color: #ACACAC;
-  text-decoration: none;
-}
-
-.linkQuote:hover {
-  color: #ff0000;
-}
-
-.labelSubject {
-  color: #34ED3A;
-  font-weight: bold;
 }
 
 .labelRole {
-  color: #ff0000;
   font-weight: bold;
 }
 
 .labelRole:before {
   font-family: Icons;
-  content: "\e0dc";
-  color: #A00;
+  content: "%";
 }
 
 .divMessage {
@@ -133,6 +80,7 @@
   margin-top: 1em;
   margin-bottom: 0.5em;
   word-wrap: break-word;
+  overflow-wrap: inherit;
 }
 
 .multipleUploads .innerPost .divMessage, .multipleUploads .markedPost .divMessage
@@ -159,15 +107,15 @@
 }
 
 .uploadCell img {
-  float: left;
   margin-right: 1em;
   margin-bottom: 1em;
 }
 
 /*Change the dimensions if you wish for larger thumbs*/
 .uploadCell img:not(.imgExpanded) {
-  max-width: 125px;
-  max-height: 125px;
+  max-width: 255px;
+  max-height: 255px;
+  float:left;
 }
 
 .multipleUploads .opUploadPanel, .multipleUploads .panelUploads {
@@ -193,7 +141,7 @@
 
 .panelBacklinks a {
   padding-left: 0.5em;
-  color: #AA0000;
+  font-size: 10px;
   text-decoration: none;
 }
 
@@ -211,6 +159,7 @@
 .labelLastEdit {
   margin-top: 0.75em;
   margin-left: 0.75em;
+  font-size: 12px;
 }
 
 .contentOmissionIndicator {
@@ -228,22 +177,10 @@
 }
 
 /*Board header*/
-.boardHeader p {
-  color: #663E11;
-}
-
-.boardHeader p#labelName {
-  font-size: 200%;
-}
-
-.boardHeader p#labelDescription {
-  font-size: 100%;
-}
-
 .boardHeader a {
-  font-size: 75%;
   display: inline-block;
   text-decoration: none;
+  padding: 5px;
 }
 
 /*Actions form*/
@@ -259,3 +196,8 @@
   #ipDelete label {
   font-size: 80%;
 }
+
+video {
+    max-width: 1000px;
+}
+

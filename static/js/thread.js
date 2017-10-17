@@ -829,31 +829,36 @@ function processReplyRequest() {
 
 function postReply() {
 
-  localRequest('/blockBypass.js?json=1',
-      function checked(error, response) {
+  if (hiddenCaptcha) {
+    processFilesToPost();
+  } else {
+    var typedCaptcha = document.getElementById('fieldCaptcha').value.trim();
 
-        if (error) {
-          alert(error);
-          return;
-        }
+    if (typedCaptcha.length !== 6 && typedCaptcha.length !== 24) {
+      alert('Captchas are exactly 6 (24 if no cookies) characters long.');
+      return;
+    } else if (/\W/.test(typedCaptcha)) {
+      alert('Invalid captcha.');
+      return;
+    }
 
-        var data = JSON.parse(response);
+    if (typedCaptcha.length == 24) {
+      processFilesToPost(typedCaptcha);
+    } else {
+      var parsedCookies = getCookies();
 
-        var alwaysUseBypass = document
-            .getElementById('alwaysUseBypassCheckBox').checked;
+      apiRequest('solveCaptcha', {
 
-        if (!data.valid
-            && (data.mode == 2 || (data.mode == 1 && alwaysUseBypass))) {
+        captchaId : parsedCookies.captchaid,
+        answer : typedCaptcha
+      }, function solvedCaptcha(status, data) {
 
-          if (window.confirm('You need a block bypass.')) {
-            window.open('/blockBypass.js');
-          }
-
-        } else {
-          processReplyRequest();
-        }
+        processFilesToPost(parsedCookies.captchaid);
 
       });
+    }
+
+  }
 
 }
 
@@ -921,3 +926,4 @@ function deleteFromIp() {
   });
 
 }
+

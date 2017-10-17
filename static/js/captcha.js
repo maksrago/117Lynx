@@ -1,5 +1,7 @@
 var captchaTimers = document.getElementsByClassName('captchaTimer');
-
+function showDiv() {
+   document.getElementById('hiddenboxes').style.display = "block";
+}
 var reloading = false;
 
 function reloadCaptcha() {

@@ -25,9 +25,9 @@
   </nav>
 
   <header>
-    <img
-      src="/.static/logo.png"
-      alt="logo" />
+<div id="logoBox" class="title">
+      <img src="/.static/logo.png" alt="logo">
+    </div>
   </header>
 
   <div id="staticPageWrapper">
@@ -54,16 +54,14 @@
       <p>When posting you can use some tools that will enhance its text in
         HTML.</p>
 
-      <h3>Greentext</h3>
+      <h3>Greentext and Orangetext</h3>
       <p>If you add a > in the start of a line, it will greentext the text
-        until it finds a new line.</p>
+        until it finds a new line. If you add a < in the start of a line, it will orangetext the text.</p>
       <br>
       <p>Example:</p>
       <p>
-        >le ebin upboat :^) -> <span class="greenText">>le ebin upboat
-          :^)</span>
+        ">green text" -> <span class="greenText">>green text</span>
       </p>
-
       <br>
 
       <h3>Quote</h3>
@@ -116,6 +114,9 @@
       </p>
       <p>
         ==SRZ BIZNIZ== -> <span class="redText">SRZ BIZNIZ</span>
+      </p>
+      <p>
+        !cow text -> <span class="cow">cow text</span>
       </p>
       <p>
         ''italics'' -> <em>italics</em>

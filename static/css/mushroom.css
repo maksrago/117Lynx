@@ -1,0 +1,169 @@
+
+hr {
+  border-color: #193447;
+}
+
+a, .navClickable {
+  color: #88CACE;
+  text-decoration: none;
+}
+
+a:hover, .hideButton:hover, .unhideButton:hover, .embedButton:hover,
+  .navClickable:hover, #closeWatcherMenuButton:hover, .watchButton:hover,
+  .watchedCellCloseButton:hover, .hideFileButton:hover {
+  text-shadow: 0px 0px 5px #117743;
+}
+
+.title, #labelBoard, .boardHeader p#labelName {
+  font-size: 20pt;
+  font-family: tahoma;
+  display: block;
+}
+
+/* body styles, inherited by whole page */
+body {
+  color: #88CACE;
+  background: #1D1F21;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 100%;
+  margin: 0px;
+  background: url('/.static/background.png');
+}
+
+
+nav {
+  background-color: #193447;
+  font-size: 70%;
+}
+
+.spoiler:hover {
+  color: #ACACAC;
+  background: none;
+}
+
+.red {
+  color: #117743;
+}
+
+
+
+#settingsFieldset {
+  border: 1px dashed #88CACE;
+}
+
+#labelCaptchaId {
+  color: #ff0000;
+}
+
+
+#staticPageFieldset {
+  border: 1px dashed #117743;
+}
+
+/*Used for places where posts are displayed*/
+.hideButton, .embedButton, #closeWatcherMenuButton, .watchButton,
+  .watchedCellCloseButton, .hideFileButton {
+  margin-left: 0.5em;
+  cursor: pointer;
+  color: #88CACE;
+}
+
+.labelId {
+  color: #ffffff;
+  padding: 0.25em;
+  border-radius: 5px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.unhideButton {
+  cursor: pointer;
+  color: #FFB300;
+  font-size: 80%;
+}
+
+.hideMenu, #watchedMenu {
+  border: 1px dashed #117743;
+  background: #1d1f21;
+  padding: 0.25em;
+}
+
+.postInfo, .opHead, .divMessage, .panelUploads, .panelIp, .panelProxyIp,
+  .contentOmissionIndicator, .labelOmission, .labelId {
+  font-size: 80%;
+  color: white;
+}
+
+.innerPost, .markedPost {
+  background: rgba(25, 52, 71, 0.8);
+}
+
+.markedPost {
+  background: #193447;
+}
+
+.linkName {
+  color: #34ED97;
+}
+
+.noEmailName, .noEmailName:hover {
+  color: #88CACE;
+}
+
+.divMessage {
+  color: white;
+}
+
+.linkSelf, .linkQuote, .linkPreview {
+  color: white;
+  text-decoration: none;
+}
+
+.linkSelf:hover, .linkQuote:hover, .linkPreview:hover {
+  color: #88cace;
+  text-decoration: underline overline;
+}
+
+.labelSubject {
+  color: #34ED3A;
+  font-weight: bold;
+}
+
+.labelRole {
+  color: white;
+}
+
+/*Change the dimensions if you wish for larger thumbs*/
+.uploadCell img:not(.imgExpanded) {
+  max-width: 255px;
+  max-height: 255px;
+}
+
+nav {
+    border-bottom: 1px solid transparent;
+}
+.boardHeader p {
+    color: #88CACE;
+    font-family: Tahoma,sans-serif;
+}
+#postingForm td {
+    text-align: left;
+    background: rgba(25, 52, 71, 0.8);
+}
+#postingForm th {
+    background: rgba(25, 52, 71, 0.8);
+    color: white;
+}
+#quick-reply table {
+    background-color: rgba(25, 52, 71, 0.8);
+}
+#quick-reply th {
+    background-color: transparent;
+}
+
+#divLatestPosts .latestPostCell{
+   background-color: rgba(25, 52, 71, 0.8);
+}
+.quoteLink, .quoteLink:hover {
+    color:white;
+    text-decoration:none;
+}

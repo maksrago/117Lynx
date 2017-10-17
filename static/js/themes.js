@@ -3,10 +3,35 @@ var themes = [ {
   label : 'Clear',
   id : 'clear'
 }, {
-  file : 'jungle.css',
-  label : 'Jungle',
-  id : 'jungle'
-} ];
+  file : 'mushroom.css',
+  label : 'Mushroom',
+  id : 'mushroom'
+}, {
+  file : 'lightconsole.css',
+  label : 'Light Console',
+  id : 'lightconsole'
+}, {
+  file : 'fapchan.css',
+  label : 'Fapchan',
+  id : 'fapchan'
+}, {
+  file : 'yotsuba_b.css',
+  label : 'Yotsuba B',
+  id : 'yotsuba'
+}, {
+  file : 'darkelly.css',
+  label : 'DarKelly',
+  id : 'darkelly'
+}, {
+  file : 'proton.css',
+  label : 'Proton',
+  id : 'proton'
+}, {
+  file : 'cow.css',
+  label : 'COW',
+  id : 'cow'
+
+}];
 
 var customCss;
 var addedTheme;

@@ -4,10 +4,8 @@
   margin: 2em auto;
 }
 
-#logoBox {
-  width: 100%;
-  margin: 0 auto 1em auto;
-  text-align: center;
+.indexBottomMenu {
+  font-weight: bold;
 }
 
 #infoBox {
@@ -15,7 +13,6 @@
   width: 100%;
   padding: 0.5em;
   margin: 1em auto 2em;
-  font-size: 120%;
 }
 
 #links, #divStats {
@@ -84,7 +81,7 @@
 
 .topBoards a {
   padding: 0.25em 0.5em;
-  background: #282A2E;
+  background: rgba(25, 52, 71, 0.8);
   text-decoration: none;
   margin: 0.5em 0.25em;
   border-radius: 5px;
@@ -106,18 +103,18 @@
   display: inline-block;
   overflow: hidden;
   padding: 0.5em;
-  background: #282A2E;
   margin: 0.5em;
   max-width: 15%;
   max-height: 8em;
   font-size: 75%;
-  border: 1px solid #117743;
   border-radius: 5px;
   vertical-align: middle;
 }
 
 .latestPostCell a {
   display: block;
+  font-size: 15px;
+  text-decoration: none;
 }
 
 #divLatestImages {

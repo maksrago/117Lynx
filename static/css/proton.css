@@ -1,0 +1,67 @@
+/* Lynx Photon */
+/* by deysu */
+/* mewch.net */
+@import url('/.static/css/yotsuba_b.css');
+body {
+  background: #EEEEEE;  
+}
+.innerPost {  /* normal reply */
+  background-color: #DDDDDD;
+  box-shadow: none;
+  border: 1px solid #CCC;
+  border-left: none;
+  border-top: 1px solid #CCC;
+  border-radius: 3px;
+}
+.markedPost { /* highlighted reply */
+  background-color: #CCC;
+  box-shadow: none;
+  border: 1px solid #BA9DBF;
+  border-left: none;
+  border-top: 1px solid #CCC;
+  border-radius: 3px;
+}
+a {
+    color: #FF6600 !important;
+}
+a:hover, #watcherButton:hover {
+    color:#FF3300!important;
+}
+#labelName { /* Board Title */
+    color: #004794;
+    font-family: Tahoma, san-serif !important;
+}
+#labelDescription { /* Board description */
+    color: #333;
+    font-family: Tahoma, san-serif !important;
+
+}
+.linkName, .linkName:hover {
+    color: #004794 !important;
+}
+nav { /* Top navigation bar */
+    background-color: #EEEEEE;
+    color: #000;
+}
+.labelId {
+    text-shadow: none;
+}
+#watcherButton {
+    color: #FF6600;
+}
+.linkQuote, .linkSelf {
+    color: #000 !important;
+}
+#postingForm td {
+    background-color: #EEEEEE;
+}
+#postingForm th {
+    background-color: #DDDDDD;
+    font-weight: bold;
+    font-size: 12px;
+    border: 1px solid #CCC;
+}
+#divLatestPosts .latestPostCell {
+    background: #DDDDDD;
+    border: 1px solid #DDDDDD;
+}

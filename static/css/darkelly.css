@@ -1,0 +1,110 @@
+/* darkkelly */
+/* mewch.net */
+/* by deysu */
+@import url('/.static/css/yotsuba_b.css');
+body {
+  background: #1D1F21;  
+  color: #fff !important;
+}
+.innerPost {  /* normal reply */
+  background-color: #282A2E;
+  border:1px solid #282a2e;
+  box-shadow: none;
+  border: none;
+  border-left: none;
+}
+
+.markedPost { /* highlighted reply */
+  background-color: #1D1D21;
+  border: 1px solid #BA9DBF;
+  border-left: none;
+  border-top: 1px solid #CCC;
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.divMessage {
+  color: #C5C8C6;
+}
+a {
+  color: #81a2be !important;
+}
+a:hover, #watcherButton:hover {
+  color:#5F89AC!important;
+}
+#labelName {
+  color: #c5c8c6;
+  font-family: sans-serif, tahoma !important;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+#labelDescription {
+    color: #c5c8c6;
+    font-family: sans-serif, tahoma !important;
+
+}
+.linkName, .linkName:hover {
+    color: #c5c8c6 !important;
+}
+nav {
+  background-color: #282A2E;
+  color: #c5c8c6;
+  border-bottom: 1px solid #000;
+}
+.labelId {
+  text-shadow: none;
+  color: #fff;
+}
+
+#watcherButton {
+  color: #81a2be;
+}
+.linkQuote, .linkSelf {
+  color: # !important;
+}
+#postingForm td {
+  background-color: transparent;
+}
+
+#postingForm th {
+  background-color: #282A2E;
+  font-weight: bold;
+  font-size: 12px;
+  border: 1px solid #000;
+  color: #c5c8c6;
+}
+input, select, textarea {
+  border: 1px solid #CCC;
+}
+input:hover, select:hover, textarea:hover {
+  border: 1px solid #CCC;
+}
+.labelSubject {
+  color: #b294bb;
+}
+.hideFileButton {
+  color: #81a2be;
+}
+
+.labelCreated {
+  color: #c5c8c6;
+}
+
+.labelOmission {
+  color: #99a29c;
+}
+
+.spanId {
+    color: #c5c8c6;
+}
+.uploadDetails {
+    color: #c5c8c6;
+}
+
+#divLatestPosts .latestPostCell{
+  background-color:transparent;
+  color:white;
+}
+.linkPost {
+  color:white;
+}

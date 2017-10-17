@@ -1,0 +1,231 @@
+
+  
+  /* Mewch.net "Light Console" CSS */
+  
+  .labelCreated, .sizeLabel, .dimensionLabel, .originalNameLink { display:none }
+  
+  nav {
+    border-bottom: 0px solid #000;
+    font-size: 15px;
+    margin: 0 0.2em;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    background-color: rgba(255,255,255,.8);
+  }
+
+  body {
+    background:#fff;
+    color:#444;
+    font-family: 'Ubuntu Mono', monospace, mono;
+  }
+  
+  /* Mascot */
+  body {
+    background-image: url('https://mewch.net/.static/logo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;
+    background-size: 20%;
+  }
+  
+  /* Thread Divider */
+  hr { border-top: 2px dashed #666; }
+  
+  .postInfo, .opHead, .divMessage, .panelUploads, .panelIp, .panelProxyIp, .contentOmissionIndicator, .labelOmission, .labelId {
+    color:#444;
+    font-size: 13px;
+  }
+  
+  .innerPost, .markedPost {
+    background:#eee;
+    border: 1px solid white;
+    margin: 0;
+    box-shadow: none;
+  }
+  
+  .innerPost:hover, input:hover, select:hover, textarea:hover {
+    background: #eee; border: 1px dashed red;
+  }
+  
+  .divMessage { margin: 0px 0px 11px 36px; }
+  .postCell { margin: 0; }
+  
+  .labelSubject {
+    color: #000;
+    display: inline;
+    max-height: 4.8rem;
+    overflow: hidden;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+  
+  .opHead, .postInfo { margin-bottom:12px }
+  
+  .linkName, .imgFlag, .labelCreated, .linkSelf, .linkQuote, .linkPreview, .pinIndicator:after, .cyclicIndicator:after, .lockIndicator:before, .bumpLockIndicator:after {
+    color:#000;
+  }
+
+  .linkName, .imgFlag, .labelCreated, .linkSelf, .linkQuote, .linkPreview {
+    font-family: 'Ubuntu Mono', monospace, mono; 
+  }
+  
+  .noEmailName, .noEmailName:hover {
+    color:#000;
+  }
+  
+  .linkName {
+    text-decoration: none;
+  }
+  
+  /* Buzz Script that makes the flags buzz when you hover over them. */
+ 
+  .imgFlag {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+ 
+  .imgFlag:hover {
+    -webkit-animation-name: buzz;
+    animation-name: buzz;
+    -webkit-animation-duration: 0.25s;
+    animation-duration: 0.25s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+ 
+  @keyframes buzz {
+    50% {
+        -webkit-transform: translateX(4px) rotate(3deg);
+        transform: translateX(4px) rotate(3deg);
+    }
+    100% {
+        -webkit-transform: translateX(-4px) rotate(-3deg);
+        transform: translateX(-4px) rotate(-3deg);
+    }
+  }
+ 
+  @-webkit-keyframes buzz {
+    50% {
+      -webkit-transform: translateX(4px) rotate(3deg);
+      transform: translateX(4px) rotate(3deg);
+    }
+    100% {
+      -webkit-transform: translateX(-4px) rotate(-3deg);
+      transform: translateX(-4px) rotate(-3deg);
+    }
+  }
+  
+  /* End of buzz script */
+  
+  .pinIndicator:after, .cyclicIndicator:after, .lockIndicator:before, .bumpLockIndicator:after {
+    position:relative;
+    bottom:-2px;
+  }
+  
+  .imgFlag {
+    padding-top:3px;
+    padding-bottom:5px;
+    max-width: 16px;
+    max-height: 16px;
+    position: relative;
+    bottom: -8px;
+  }
+  
+  .divPosts {
+    margin-left: 24px;
+  }
+
+  #postingForm td {
+    background: 0;
+  }
+
+  #postingForm {
+    color:#444;
+    margin: 6px;
+    padding: 16px;
+    padding-left:0px;
+    border-radius: 0px;
+  }
+
+  #quick-reply table {
+    background-color: #666;
+    border-radius: 6px;
+    border: 1px solid #b67b2f;
+  }
+
+  #quick-reply th .handle {
+    background-color: #333;
+  }
+
+  #quick-reply th {
+    background-color: #3c372e;
+    border: 1px solid #3c372e;
+  }
+  
+  input, select, textarea {
+    font-family: 'Ubuntu Mono', monospace, mono;
+    background:#eee;
+    color:#444;
+    border-radius: 0px;
+    border: 1px solid #AAAAAA;
+  }
+  
+  .greenText {
+    color: #148800;
+  }
+  
+  .redText {
+    color: #4ab;
+    font-weight: bold;
+    font-size: 125%;
+  }
+  
+  a, .hideButton, .unhideButton, .embedButton, .navClickable, #closeWatcherMenuButton, .watchButton, .watchedCellCloseButton, .hideFileButton {
+    color: navy;
+    text-decoration: none;
+  }
+  a:hover, .linkSelf:hover, .linkQuote:hover {
+    color: red;
+  }
+  
+  .panelBacklinks a { color: #755; }
+  .panelBacklinks a:hover { color: #755; }
+  
+  .quoteLink { color: #755; text-decoration: none; }
+  .quoteLink:hover { color: #755; text-decoration: none; }
+
+  #postingForm th {
+    background: 0;
+    border: 0;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: right;
+  }
+
+  div[id^="connection"] {
+    background-color: #111;
+    border: 1px solid #000;
+  }
+  
+  .boardHeader p#labelName {
+    color: black;
+    text-shadow: 1px 1px 2px silver;
+    font-weight: bold;
+    text-align: center;
+
+  }
+  
+  .boardHeader p#labelDescription {
+    color: #A4C;
+  }
+  
+  .uploadDetails{
+    color:#eee;
+  }
+  .innerOP .uploadDetails{
+    color:rgba(255,255,255,.8);
+  }
