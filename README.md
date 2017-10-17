@@ -1,4 +1,4 @@
-**PenumbraLynx** is an updated version of [8TailedLynx](https://gitgud.io/obongo/8TailedLynx)'s Penumbra version.
+**WarmMilk** is an updated version of PenumbraLynx for Mewch.
 
 Install by cloning anywhere and then pointing it to the engine on the global settings. Make sure to check out the correct tag.
 
