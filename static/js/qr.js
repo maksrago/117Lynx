@@ -176,7 +176,7 @@ function setQr() {
   qrhtml += '</textarea></td></tr> ';
 
   qrhtml += '<tr><td colspan="2">';
-  qrhtml += '<input id="qrpassword" type="text" placeholder="Password"></td></tr>';
+  qrhtml += '<input id="qrpassword" type="password" placeholder="Password"></td></tr>';
 
   var noFlagDiv = document.getElementById('noFlagDiv');
 
