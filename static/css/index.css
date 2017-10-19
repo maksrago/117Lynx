@@ -30,6 +30,11 @@
   content: "\e069";
   margin-right: 0.25em;
 }
+#linkTor:before {
+  font-family: Icons;
+  content: "\e0b8";
+  margin-right: 0.25em;
+}
 
 #linkGraphs:before {
   font-family: Icons;
