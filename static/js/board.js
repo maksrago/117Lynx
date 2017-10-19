@@ -4,6 +4,15 @@ var originalButtonText;
 var identifierElement = document.getElementById('boardIdentifier');
 var boardUri = identifierElement ? identifierElement.value : null;
 
+if (!boardUri) {
+
+  var altIdentifierElement = document.getElementById('labelBoard');
+
+  boardUri = altIdentifierElement ? altIdentifierElement.innerHTML.replace(
+      /\//g, '') : null;
+
+}
+
 var hiddenCaptcha;
 var messageLimit;
 
@@ -14,10 +23,6 @@ if (!DISABLE_JS) {
   if (identifierElement) {
 
     messageLimit = +document.getElementById('labelMessageLength').innerHTML;
-
-    if (document.getElementById('divUpload')) {
-      setDragAndDrop();
-    }
 
     var postButton = document.getElementById('jsButton');
     postButton.style.display = 'inline';
@@ -67,6 +72,8 @@ function sendThreadData(files, captchaId) {
     var combo = document.getElementById('flagCombobox');
 
     var selectedFlag = combo.options[combo.selectedIndex].value;
+
+    savedSelectedFlag(selectedFlag);
   }
 
   var forcedAnon = !document.getElementById('fieldName');

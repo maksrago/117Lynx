@@ -6,7 +6,12 @@ var selectedFiles = [];
 var selectedDiv;
 var selectedDivQr;
 
-if (!DISABLE_JS && typeof (Storage) !== "undefined") {
+if (!DISABLE_JS && typeof (Storage) !== "undefined"
+    && document.getElementById('fieldPostingPassword')) {
+
+  if (document.getElementById('divUpload')) {
+    setDragAndDrop();
+  }
 
   var savedPassword = localStorage.deletionPassword;
 
@@ -20,23 +25,43 @@ if (!DISABLE_JS && typeof (Storage) !== "undefined") {
 
   }
 
-  var forcedAnon = !document.getElementById('fieldName');
+  var nameField = document.getElementById('fieldName');
 
-  if (!forcedAnon) {
-    document.getElementById('fieldName').value = localStorage.name || '';
+  if (nameField) {
+    nameField.value = localStorage.name || '';
   }
 
-  document.getElementById('alwaysUseBypassDiv').display = 'inline';
+  var flagCombo = document.getElementById('flagCombobox');
 
-  var bypassCheckBox = document.getElementById('alwaysUseBypassCheckBox');
+  if (flagCombo && localStorage.savedFlags) {
 
-  if (JSON.parse(localStorage.ensureBypass)) {
-    bypassCheckBox.checked = true;
+    var flagInfo = JSON.parse(localStorage.savedFlags);
+
+    if (flagInfo[boardUri]) {
+
+      for (var i = 0; i < flagCombo.options.length; i++) {
+
+        if (flagCombo.options[i].value === flagInfo[boardUri]) {
+          flagCombo.selectedIndex = i;
+          break;
+        }
+
+      }
+
+    }
+
   }
 
-  bypassCheckBox.addEventListener('change', function() {
-    localStorage.setItem("ensureBypass", bypassCheckBox.checked);
-  });
+}
+
+function savedSelectedFlag(selectedFlag) {
+
+  var savedFlagData = localStorage.savedFlags ? JSON
+      .parse(localStorage.savedFlags) : {};
+
+  savedFlagData[boardUri] = selectedFlag;
+
+  localStorage.setItem('savedFlags', JSON.stringify(savedFlagData));
 
 }
 

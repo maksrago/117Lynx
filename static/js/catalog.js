@@ -145,7 +145,7 @@ function initCatalog() {
 
   });
 
-  var postingForm = document.getElementById('newPostFieldset');
+  var postingForm = document.getElementById('innerPostingForm');
 
   if (postingForm) {
 
