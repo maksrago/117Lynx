@@ -23,6 +23,10 @@ var originalTitle = document.title;
 var lastPost;
 var highLightedIds = [];
 var idsRelation = {};
+var reverseHTMLReplaceTable = {
+  '&lt;' : '<',
+  '&gt;' : '>'
+};
 
 var postCellTemplate = '<div class="innerPost"><div class="postInfo title">'
     + '<input type="checkbox" class="deletionCheckBox"> <span class="labelSubject">'
@@ -474,7 +478,10 @@ function setPostHideableElements(postCell, post) {
 
   if (post.flag) {
     imgFlag.src = post.flag;
-    imgFlag.title = post.flagName;
+    imgFlag.title = post.flagName.replace(/&(l|g)t;/g, function replace(match) {
+      return reverseHTMLReplaceTable[match];
+    });
+
 
     if (post.flagCode) {
       imgFlag.className += ' flag' + post.flagCode;
