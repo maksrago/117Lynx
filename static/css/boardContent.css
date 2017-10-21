@@ -69,11 +69,9 @@
 }
 
 .flagPreview {
-  display: inline-block;
-  max-width: 10%;
-  height: 16px;
+display: inline-block;
+height: auto;
 }
-
 #postBox div.wider input, #flagsDiv {
 
   width: 100%;
@@ -123,4 +121,6 @@
   font-size: 80%;
 }
 
-
+#qrFlagsDiv{
+	font-size:0px;
+}
