@@ -234,8 +234,8 @@ function saveSettings() {
   } else if (!typedName.length || !typedName.length) {
     alert('Both name and description are mandatory.');
     return;
-  } else if (typedMessage.length > 256) {
-    alert('Message too long, keep it under 256 characters.');
+  } else if (typedMessage.length > 8000) {
+    alert('Message too long, keep it under 8000 characters.');
     return;
   }
 
