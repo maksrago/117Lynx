@@ -19,7 +19,9 @@ a:hover, .hideButton:hover, .unhideButton:hover, .embedButton:hover,
   font-family: tahoma;
   display: block;
 }
-
+.panelBacklinks a {
+    color: #88CACE;
+}
 /* body styles, inherited by whole page */
 body {
   color: #88CACE;
@@ -54,7 +56,10 @@ nav {
 #labelCaptchaId {
   color: #ff0000;
 }
-
+div[id^="connection"]{
+  background-color:rgba(25, 52, 71, 0.8);
+  border:rgba(25, 52, 71, 0.8);
+}
 
 #staticPageFieldset {
   border: 1px dashed #117743;
