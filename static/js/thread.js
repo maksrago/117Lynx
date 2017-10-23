@@ -282,6 +282,7 @@ function saveThreadSettings() {
 var replyCallback = function(status, data) {
 
   if (status === 'ok') {
+    storeUsedPostingPassword(boardUri, threadId, data);
     document.getElementById('fieldMessage').value = '';
     document.getElementById('fieldSubject').value = '';
     clearQRAfterPosting();
@@ -638,7 +639,11 @@ function addPost(post) {
     processQuote(quote);
   }
 
-  setHideMenu(postCell.getElementsByClassName('deletionCheckBox')[0]);
+  var checkbox = postCell.getElementsByClassName('deletionCheckBox')[0];
+
+  setHideMenu(checkbox);
+
+  setExtraMenu(checkbox)
 
   processPostingQuote(postCell.getElementsByClassName('linkQuote')[0]);
 

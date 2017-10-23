@@ -22,19 +22,12 @@
 
 .unhideButton {
   cursor: pointer;
-  color: #FFB300;
   font-size: 80%;
 }
 
 .hideButton::before {
   font-family: 'Icons';
   content: '\e017';
-}
-
-.hideMenu label {
-  display: block;
-  font-size: 80%;
-  cursor: pointer;
 }
 
 .postInfo, .opHead, .divMessage, .panelUploads, .panelIp, .panelProxyIp,
@@ -199,5 +192,25 @@
 
 video {
     max-width: 1000px;
+}
+
+.floatingMenu {
+  border: 1px dashed;
+  background: #FFCCCB;
+  padding: 0.25em;
+}
+
+.floatingMenu label {
+  font-size: 80%;
+  cursor: pointer;
+}
+.hideButton, .embedButton, #closeWatcherMenuButton, .watchButton,
+  .watchedCellCloseButton, .hideFileButton, .extraMenuButton {
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+.extraMenuButton::before {
+    font-family: 'Icons';
+    content: '\25B6';
 }
 

@@ -1,9 +1,5 @@
 var shownMenu;
 
-var postHideContent = '<label class="hidePostButton">Hide post</label>';
-var threadHideContent = '<label class="hidePostButton">Hide OP</label><hr>';
-threadHideContent += '<label class="hideThreadButton">Hide thread</label>';
-
 function registerHiding(board, thread, post, unhiding) {
 
   var storedData = localStorage.hidingData;
@@ -50,13 +46,30 @@ function setHideMenu(checkbox) {
   checkbox.parentNode.insertBefore(hideButton, checkbox.nextSibling);
 
   var hideMenu = document.createElement('div');
-  hideMenu.className = 'hideMenu';
+  hideMenu.className = 'floatingMenu';
   hideMenu.style.display = 'none';
   hideMenu.style.position = 'absolute';
+var postHideButton;
+  postHideButton = document.createElement('label');
 
-  var menuHTML = post ? postHideContent : threadHideContent;
+  if (post) {
 
-  hideMenu.innerHTML = menuHTML;
+    postHideButton.innerHTML = 'Hide post';
+    hideMenu.appendChild(postHideButton);
+
+  } else {
+
+    postHideButton.innerHTML = 'Hide OP';
+    hideMenu.appendChild(postHideButton);
+
+    hideMenu.appendChild(document.createElement('hr'));
+
+
+ var threadHideButton = document.createElement('label');
+    threadHideButton.innerHTML = 'Hide thread';
+    hideMenu.appendChild(threadHideButton);
+
+  }
 
   document.body.appendChild(hideMenu);
 
@@ -97,7 +110,6 @@ function setHideMenu(checkbox) {
 
   };
 
-  var postHideButton = hideMenu.getElementsByClassName('hidePostButton')[0];
 
   postHideButton.onclick = function() {
     checkbox.parentNode.parentNode.style.display = 'none';
@@ -107,7 +119,6 @@ function setHideMenu(checkbox) {
   };
 
   if (!post) {
-    var threadHideButton = hideMenu.getElementsByClassName('hideThreadButton')[0];
 
     var unhideThreadButton = document.createElement('span');
 
