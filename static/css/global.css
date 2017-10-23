@@ -688,8 +688,11 @@ span.hideFileButton {
 a.nameLink {
     font-size: 0px;
 }
+.spoiler a:hover, 
+.spoiler .embedButton:hover{
+    color:white;
+}
 .spoiler a, 
-.spoiler, 
-.embedButton {
+.spoiler .embedButton {
     color:#000000;
 } 

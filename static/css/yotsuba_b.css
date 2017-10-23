@@ -10,12 +10,13 @@ body {
     border-top: none;
 }
 .markedPost {
-  background-color: #D6BAD0;
+    background-color: #D6BAD0;
+    border: 1px solid #B7C5D9;
+    border-left: none;
 }
 nav {
     background-color: #D5D9F0;
     border-bottom: none;
-
 }
 #postingForm th {
     background-color: #9786EA;
@@ -36,4 +37,7 @@ nav {
 #divLatestPosts .latestPostCell {
     background: #D6BAD0;
 }
-
+.floatingMenu {
+    background-color: #BEC1D5;
+    border: 1px solid #000;
+}

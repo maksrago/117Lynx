@@ -17,6 +17,9 @@ a:hover {
 }
 .markedPost {
     background-color: #F0C0B0;
+    border: 1px solid #D9BFB7;
+    border-left: none;
+    border-top: none;
 }
 .divMessage {
     color: #800000;
@@ -55,5 +58,9 @@ nav {
 }
 #divLatestPosts .latestPostCell {
     background: #F0E0D6;
+}
+.floatingMenu {
+    background-color: #F0C0B0;
+    border: 1px solid #D99F91;
 }
 

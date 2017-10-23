@@ -1,7 +1,6 @@
 /* darkkelly */
 /* mewch.net */
 /* by deysu */
-@import url('/.static/css/yotsuba_b.css');
 body {
   background: #1D1F21;  
   color: #fff !important;
@@ -107,4 +106,11 @@ input:hover, select:hover, textarea:hover {
 }
 .linkPost {
   color:white;
+}
+#quick-reply table {
+    background-color: #282A2E;
+    border: none;
+}
+#quick-reply th {
+    background-color: #282A2E;
 }
