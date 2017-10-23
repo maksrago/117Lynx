@@ -9,6 +9,9 @@ body {
     border-left: none;
     border-top: none;
 }
+.markedPost {
+  background-color: #D6BAD0;
+}
 nav {
     background-color: #D5D9F0;
     border-bottom: none;
@@ -30,3 +33,7 @@ nav {
 #quick-reply th {
     background-color: #9988EE;
 }
+#divLatestPosts .latestPostCell {
+    background: #D6BAD0;
+}
+

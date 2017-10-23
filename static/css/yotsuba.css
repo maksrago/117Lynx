@@ -15,6 +15,9 @@ a:hover {
     border-left: none;
     border-top: none;
 }
+.markedPost {
+    background-color: #F0C0B0;
+}
 .divMessage {
     color: #800000;
 }
