@@ -3,6 +3,9 @@ body {
     color: #000000;
     font-family: arial, helvetica, sans-serif;
 }
+a:hover {
+    color: red;
+}
 .innerPost {
     background-color: #CED1E7;
     border: 1px solid #B7C5D9;
@@ -41,3 +44,4 @@ nav {
     background-color: #BEC1D5;
     border: 1px solid #000;
 }
+
