@@ -30,6 +30,10 @@ var themes = [ {
   file : 'cow.css',
   label : 'COW',
   id : 'cow'
+}, {
+  file : 'yotsuba.css',
+  label : 'Yotsuba',
+  id : 'yotsuba'
 
 }];
 
