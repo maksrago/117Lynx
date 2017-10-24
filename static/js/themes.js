@@ -11,6 +11,10 @@ var themes = [ {
   label : 'Light Console',
   id : 'lightconsole'
 }, {
+  file : 'hideimg.css',
+  label : 'Safe for work',
+  id : 'hideimg'
+}, {
   file : 'fapchan.css',
   label : 'Fapchan',
   id : 'fapchan'
