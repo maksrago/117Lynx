@@ -121,7 +121,10 @@ height: auto;
 }
 
 #qrFlagsDiv{
-	font-size:0px;
+  font-size:0px;
+}
+.modalDecorationPanel input[type='text'], .modalDecorationPanel{
+  display: block;
 }
 #postBox div.wider input, #flagsDiv, .modalDecorationPanel 
 #input[type='text']
