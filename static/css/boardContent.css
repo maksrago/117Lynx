@@ -68,8 +68,13 @@
 }
 
 .flagPreview {
-display: inline-block;
-height: auto;
+  display: inline-block;
+  height: auto;
+}
+.modalDecorationPanel select, .modalDecorationPanel textarea {
+  width: 100%;
+  display: block;
+  margin-bottom: 0.25em;
 }
 #postBox div.wider input, #flagsDiv {
 
