@@ -390,6 +390,9 @@ function setUploadLinks(cell, file) {
   thumbLink.href = file.path;
 
   thumbLink.setAttribute('data-filemime', file.mime);
+  if (file.mime.indexOf('image/') > -1) {
+    addGalleryFile(file.path);
+  }
 
   var img = document.createElement('img');
   img.src = file.thumb;
