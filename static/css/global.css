@@ -135,50 +135,32 @@ nav a {
     float: right;
 }
 #navLinkHome:before {
-    
     content: "\e082";
-    
 }
 #navBoardList:before {
-    
     content: "\e03a";
-    
 }
 #linkOverboard:before,
 #navOverboard:before {
-    
     content: "\e007";
-    
 }
 #navPosting:before {
-    
     content: "\e09a";
-    
 }
 #navCatalog:before {
-    
     content: "\e072";
-    
 }
 #linkRss:before {
-    
     content: "\e0b7";
-    
 }
 #linkTop:before {
-    
     content: "\e012";
-    
 }
 #linkBottom:before {
-    
     content: "\e00f";
-    
 }
 #linkBack:before {
-    
     content: "\e003";
-    
 }
 #divPages {
     display: inline-block;

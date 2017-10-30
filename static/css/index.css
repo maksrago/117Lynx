@@ -26,56 +26,38 @@
 }
 
 #linkLogs:before {
-  
   content: "\e069";
-  
 }
 #linkTor:before {
-  
   content: "\e0b8";
-  
 }
 
 #linkGraphs:before {
-  
   content: "\e018";
-  
 }
 
 #linkAccount:before {
-  
   content: "\e081";
-  
 }
 
 #linkGlobalRules:before {
-  
   content: "\e0c9";
-  
 }
 
 #linkAbout:before {
-  
   content: "\e06c";
-  
 }
 
 #linkEngine:before {
-  
   content: "\e064";
-  
 }
 
 #linkLinks:before {
-  
   content: "\e06a";
-  
 }
 
 #linkContact:before {
-  
   content: "\e05c";
-  
 }
 
 .topBoards {
