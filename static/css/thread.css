@@ -5,10 +5,7 @@
   color: #A00;
 }
 #galleryLink:before {
-  font-family: Icons;
   content: "\e02c";
-  margin-left: 0.25em;
-  margin-right: 0.5em;
 }
 
 .galleryImage {

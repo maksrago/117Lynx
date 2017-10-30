@@ -89,12 +89,18 @@ if (!DISABLE_JS) {
 
   if (postingLink) {
 
+    var referenceNode = postingLink.nextSibling;
+    postingLink.parentNode.insertBefore(document.createTextNode(' '),
+        referenceNode);
+
     var divider = document.createElement('span');
     divider.innerHTML = '/';
 
-    var referenceNode = postingLink.nextSibling;
-
     postingLink.parentNode.insertBefore(divider, referenceNode);
+    
+    postingLink.parentNode.insertBefore(document.createTextNode(' '),
+        referenceNode);
+
 
     var themeSelector = document.createElement('select');
     themeSelector.id = 'themeSelector';

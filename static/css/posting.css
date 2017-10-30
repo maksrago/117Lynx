@@ -26,7 +26,6 @@
 }
 
 .hideButton::before {
-  font-family: 'Icons';
   content: '\e017';
 }
 
@@ -207,10 +206,8 @@ video {
 .hideButton, .embedButton, #closeWatcherMenuButton, .watchButton,
   .watchedCellCloseButton, .hideFileButton, .extraMenuButton {
   margin-left: 0.5em;
-  cursor: pointer;
 }
 .extraMenuButton::before {
-    font-family: 'Icons';
     content: '\25B6';
 }
 

@@ -56,10 +56,6 @@ p,
 label {
     margin: 0.25em 0;
 }
-.navClickable,
-.watchButton {
-    cursor: pointer
-}
 u {
     text-decoration: underline;
 }
@@ -139,51 +135,50 @@ nav a {
     float: right;
 }
 #navLinkHome:before {
-    font-family: Icons;
+    
     content: "\e082";
-    margin-right: 0.25em;
+    
 }
 #navBoardList:before {
-    font-family: Icons;
+    
     content: "\e03a";
-    margin-right: 0.25em;
+    
 }
 #linkOverboard:before,
 #navOverboard:before {
-    font-family: Icons;
+    
     content: "\e007";
-    margin-right: 0.25em;
+    
 }
 #navPosting:before {
-    font-family: Icons;
+    
     content: "\e09a";
-    margin-right: 0.25em;
+    
 }
 #navCatalog:before {
-    font-family: Icons;
+    
     content: "\e072";
-    margin-right: 0.25em;
+    
 }
 #linkRss:before {
-    font-family: Icons;
+    
     content: "\e0b7";
-    margin-right: 0.25em;
+    
 }
 #linkTop:before {
-    font-family: Icons;
+    
     content: "\e012";
-    margin-right: 0.25em;
+    
 }
 #linkBottom:before {
-    font-family: Icons;
+    
     content: "\e00f";
-    margin-right: 0.25em;
+    
 }
 #linkBack:before {
-    font-family: Icons;
+    
     content: "\e003";
-    margin-right: 0.25em;
-    margin-left: 0.5em;
+    
 }
 #divPages {
     display: inline-block;
@@ -619,6 +614,20 @@ nav {
     border: 1px solid #B7B9C4;
     border-radius: 0px;
 }
+.coloredIcon {
+  color: #FFB300;
+  cursor: pointer
+}
+
+.coloredIcon::before {
+  font-family: 'Icons';
+}
+
+#navLinkSpan .coloredIcon:before, #navOptionsSpan .coloredIcon:before,
+  #links .coloredIcon:before {
+  margin-right: 0.25em;
+}
+
 .boardPages {
     color: #8899AA;
 }

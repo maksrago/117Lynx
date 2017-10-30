@@ -17,7 +17,6 @@ function stopMovingWatched() {
 
   var body = document.getElementsByTagName('body')[0];
 
-  body.onmousedown = watcherDragInfo.originalMouseDown;
   body.onmouseup = watcherDragInfo.originalMouseUp;
 }
 
@@ -28,15 +27,11 @@ function startMovingWatched(evt) {
     return;
   }
 
+  evt.preventDefault();
+
   lockedDrag = true;
 
   var body = document.getElementsByTagName('body')[0];
-
-  watcherDragInfo.originalMouseDown = body.onmousedown;
-
-  body.onmousedown = function() {
-    return false;
-  };
 
   watcherDragInfo.originalMouseUp = body.onmouseup;
 
@@ -49,6 +44,7 @@ function startMovingWatched(evt) {
   evt = evt || window.event;
 
   var rect = watchedMenu.getBoundingClientRect();
+
   watcherDragInfo.diffX = evt.clientX - rect.right;
   watcherDragInfo.diffY = evt.clientY - rect.top;
 
@@ -95,18 +91,22 @@ var moveWatched = function(evt) {
 if (!DISABLE_JS) {
 
   var postingLink = document.getElementById('navPosting');
+  var referenceNode = postingLink.nextSibling;
+
+  postingLink.parentNode.insertBefore(document.createTextNode(' '),
+      referenceNode);
 
   var divider = document.createElement('span');
   divider.innerHTML = '/';
-
-  var referenceNode = postingLink.nextSibling;
-
   postingLink.parentNode.insertBefore(divider, referenceNode);
 
-  var watcherButton = document.createElement('span');
+  postingLink.parentNode.insertBefore(document.createTextNode(' '),
+      referenceNode);
+
+  var watcherButton = document.createElement('a');
   watcherButton.innerHTML = 'watched threads';
   watcherButton.id = 'watcherButton';
-  watcherButton.setAttribute('class', 'navClickable');
+  watcherButton.setAttribute('class', 'coloredIcon');
 
   var watcherCounter = document.createElement('span');
 
@@ -129,6 +129,7 @@ if (!DISABLE_JS) {
 
   var closeWatcherMenuButton = document.createElement('span');
   closeWatcherMenuButton.id = 'closeWatcherMenuButton';
+  closeWatcherMenuButton.setAttribute('class', 'coloredIcon');
   closeWatcherMenuButton.onclick = function() {
     if (!showingWatched) {
       return;
@@ -344,6 +345,7 @@ function addWatchedCell(board, thread, watchData) {
 
   var labelWrapper = document.createElement('label');
   labelWrapper.setAttribute('class', 'watchedCellLabel');
+
   var label = document.createElement('a');
   label.innerHTML = watchData.label || (board + '/' + thread);
   label.href = '/' + board + '/res/' + thread + '.html';
@@ -369,7 +371,7 @@ function addWatchedCell(board, thread, watchData) {
   cell.appendChild(labelWrapper);
 
   var button = document.createElement('span');
-  button.setAttribute('class', 'watchedCellCloseButton');
+  button.setAttribute('class', 'watchedCellCloseButton coloredIcon');
   cell.appendChild(button);
 
   button.onclick = function() {
@@ -406,7 +408,7 @@ function processOP(op) {
   var thread = nameParts[1];
 
   var watchButton = document.createElement('span');
-  watchButton.setAttribute('class', 'watchButton');
+  watchButton.setAttribute('class', 'watchButton coloredIcon');
   watchButton.title = "Watch Thread";
 
   checkBox.parentNode.insertBefore(watchButton,
