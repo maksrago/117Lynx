@@ -11,7 +11,6 @@ var themes = [ {
   label : 'Brazil',
   id : 'brazil'
 }, {
-}, {
   file : 'lightconsole.css',
   label : 'Light Console',
   id : 'lightconsole'
