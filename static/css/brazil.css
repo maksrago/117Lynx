@@ -1,0 +1,150 @@
+hr {
+  border-color: #117743;
+}
+
+a, .navClickable {
+  color: #195319;
+}
+
+a:hover, .hideButton:hover, .unhideButton:hover, .embedButton:hover,
+  .navClickable:hover, #closeWatcherMenuButton:hover, .watchButton:hover,
+  .watchedCellCloseButton:hover, .hideFileButton:hover {
+  color: red;
+}
+
+input[type="text"], input[type="password"], textarea {
+  border: 1px solid #a9a9a9;
+}
+
+/* body styles, inherited by whole page */
+body {
+  background-image: url('https://gitgud.io/LynxChan/PenumbraLynx/raw/brazil/static/jungle_bg1.png'), url('https://gitgud.io/LynxChan/PenumbraLynx/raw/brazil/static/jungle_bg.png');
+  background-repeat: repeat-x, repeat;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 10pt;
+  margin: 0px;
+  color: #242B23;
+}
+#postingForm td {
+    background-color:transparent;
+}
+#postingForm th, .floatingMenu {
+    background-color:#B3C87F;
+}
+/* header and nav / top of page styles */
+
+nav {
+  background-color: #B3C87F;
+  border-bottom: 1px solid;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+  padding-bottom: 3px;
+  font-size: 80%;
+  text-align: center;
+}
+
+nav:hover {
+  background-color: #CADC9D;
+}
+
+.reportFieldset {
+  border: 1px dashed #117743;
+}
+
+.labelId {
+  color: #ffffff;
+  padding: 0.25em;
+  border-radius: 5px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.hideMenu, #watchedMenu {
+  border: 1px dashed #117743;
+  background-image: url('https://gitgud.io/LynxChan/PenumbraLynx/raw/brazil/static/jungle_td.png');
+  padding: 0.25em;
+}
+
+.postInfo, .opHead, .divMessage, .panelUploads, .panelIp, .panelProxyIp,
+  .contentOmissionIndicator, .labelOmission, .labelId {
+  font-size: 13px;
+}
+
+.innerPost, .markedPost {
+  background-image: url('https://gitgud.io/LynxChan/PenumbraLynx/raw/brazil/static/jungle_td.png');
+  display: inline-block;
+  overflow: hidden;
+  padding-right: 0.5em;
+  padding-left: 0.25em;
+  padding-top: 0.25em;
+  max-width: 100%;
+  border: 2px solid #E5D959;
+  border-radius: 5px;
+}
+
+.markedPost {
+  background: rgba(59, 22, 43, 0.4);
+}
+
+.linkName {
+  font-weight: bold;
+  color: #34ED97;
+}
+
+.linkName:hover {
+  color: #AA0000;
+}
+
+.noEmailName, .noEmailName:hover {
+  color: maroon;
+  text-shadow: none;
+}
+
+.quoteLink {
+  color: #ff0000;
+}
+
+.linkSelf:hover {
+  color: #AA0000;
+}
+
+.linkQuote:hover {
+  color: #ff0000;
+}
+
+.labelSubject {
+  color: #34ED3A;
+  font-weight: bold;
+}
+
+.labelRole {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.labelRole:before {
+  font-family: Icons;
+  content: "\e0dc";
+  color: #A00;
+}
+
+.panelBacklinks a {
+  color: #AA0000;
+}
+
+/*Board header*/
+.boardHeader h1 {
+  color: #054500;
+  font-family: tahoma;
+  letter-spacing: -2px;
+  font-size: 20pt;
+  margin: 0;
+}
+
+.boardHeader p#labelName {
+  font-size: 200%;
+  color: #054500;
+}
+
+.boardHeader p#labelDescription {
+  font-size: 8pt;
+  color: #054500;
+}
