@@ -65,6 +65,7 @@
 #quick-reply th .close-btn {
   float: right;
   padding: 0 5px;
+  font-family: Icons;
 }
 
 #quick-reply input[type="text"], #quick-reply select {

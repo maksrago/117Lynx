@@ -4,6 +4,11 @@
   margin: 2em auto;
 }
 
+[id^="link"]:before{
+  font-family: Icons;
+  padding: 4px;
+}
+
 .indexBottomMenu {
   font-weight: bold;
 }
