@@ -101,6 +101,7 @@
 .uploadCell img {
   margin-right: 1em;
   margin-bottom: 1em;
+  float: left;
 }
 
 /*Change the dimensions if you wish for larger thumbs*/
