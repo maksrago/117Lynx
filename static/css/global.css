@@ -641,9 +641,6 @@ nav {
 input[type=checkbox]#checkboxSpoiler+label:before {
     color: #6574cc;
 }
-.hideButton {
-    display: none;
-}
 .linkPreview {
     display: none;
 }
