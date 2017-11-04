@@ -21,6 +21,7 @@
 }
 
 .unhideButton {
+  clear: left;
   cursor: pointer;
   font-size: 80%;
 }
