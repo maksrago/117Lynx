@@ -8,6 +8,9 @@
     font-size: 75%;
     text-decoration: none;
 }
+#fieldCaptcha{
+    float: left;
+}
 #logoBox {
     width: 100%;
     margin: 0 auto 1em auto;
