@@ -35,6 +35,9 @@ a:hover {
 .labelOmission{
     color: #707070;
 }
+#watchedMenu {
+    background: #F0C0B0;
+}
 nav {
     background-color: #EFDFD5;
     border-bottom: none;

@@ -15,7 +15,9 @@ body {
 .hideFileButton {
   color: #EEBB99;
 }
-
+#watchedMenu, .floatingMenu {
+  background: #292929;
+}
 .labelSubject {
   color: #F10000;
   font-weight: bold;
@@ -77,7 +79,7 @@ a:hover, .hideButton:hover, .unhideButton:hover, .embedButton:hover,
 	color: #800000;
 }
 
-.watchButton, .hideButton {
+.coloredIcon, .watchButton, .hideButton {
   color: #EEBB99;
 }
 

@@ -37,6 +37,13 @@ a:link:hover{
 	background-color: #555555 !important;
 }
 
+.hideButton, .coloredIcon {
+    color: #f8c20f !important;
+}
+
+.floatingMenu, #watchedMenu {
+    background: #333;
+} 
 hr {
     border-color: #222;
 }

@@ -45,6 +45,9 @@ nav { /* Top navigation bar */
 .labelId {
     text-shadow: none;
 }
+.floatingMenu, #watchedMenu {
+  background: #DDDDDD;
+}
 #watcherButton {
     color: #FF6600;
 }

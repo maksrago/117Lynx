@@ -32,6 +32,9 @@ body {
   background: url('/.static/background.png');
 }
 
+.coloredIcon {
+  color: #88CACE;
+}
 
 nav {
   background-color: #193447;
@@ -87,9 +90,13 @@ div[id^="connection"]{
 }
 
 .hideMenu, #watchedMenu {
-  border: 1px dashed #117743;
-  background: #1d1f21;
+  border: 1px dashed #88CACE;
   padding: 0.25em;
+  background: url('/.static/background.png');
+}
+
+.floatingMenu {
+  background: url('/.static/background.png');
 }
 
 .postInfo, .opHead, .divMessage, .panelUploads, .panelIp, .panelProxyIp,
