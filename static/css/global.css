@@ -690,3 +690,18 @@ a.nameLink {
     width: 100%;
     max-width: 728px;
 }
+@-webkit-keyframes wiggle {
+    0% {
+    	-webkit-transform:rotate(4deg);
+    }
+    50% {
+    	-webkit-transform:rotate(-4deg);
+    }
+    100% {
+    	-webkit-transform:rotate(4deg);
+    }
+}
+     
+#bannerImage:hover {
+    -webkit-animation: wiggle 0.5s infinite;
+}
