@@ -678,7 +678,6 @@ a.nameLink {
 } 
 //You are allowed to block this element in your css if you plan on making a custom css.
 #pleaseloveus {
-    text-align:center;
     overflow: hidden;
     padding-right: 0.5em;
     padding-left: 0.25em;
