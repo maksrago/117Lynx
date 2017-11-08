@@ -676,4 +676,18 @@ a.nameLink {
 .spoiler .embedButton {
     color:#000000;
 } 
-
+//You are allowed to block this element in your css if you plan on making a custom css.
+#pleaseloveus {
+    text-align:center;
+    overflow: hidden;
+    padding-right: 0.5em;
+    padding-left: 0.25em;
+    padding-top: 0.25em;
+    max-width: 100%;
+    border: 0;
+}
+#pleaseloveus img {
+    box-shadow: 0px 3px 14px -5px #000000;
+    width: 100%;
+    max-width: 728px;
+}
