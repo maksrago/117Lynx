@@ -134,10 +134,10 @@ nav a {
     float: right;
 }
 #navRadio:before {
-    content: "\266B";
+    content: "\e029";
 }
 #navDonate:before {
-    content: "\2764";
+    content: "\e058";
 }
 #navLinkHome:before {
     content: "\e082";
