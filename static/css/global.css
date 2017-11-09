@@ -23,6 +23,11 @@
 .small a {
     text-decoration: none;
 }
+//Temp fix, clean this up soon
+[id^="nav"]::before{
+    font-family: Icons;
+    margin-right: 0.25em;
+}
 #postingForm button,
 #qrbutton {
     width: 8em;
