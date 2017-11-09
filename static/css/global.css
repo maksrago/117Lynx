@@ -23,7 +23,7 @@
 .small a {
     text-decoration: none;
 }
-//Temp fix, clean this up soon
+/*Fix this shit*/
 [id^="nav"]::before{
     font-family: Icons;
     margin-right: 0.25em;
@@ -690,7 +690,7 @@ a.nameLink {
 .spoiler .embedButton {
     color:#000000;
 } 
-//You are allowed to block this element in your css if you plan on making a custom css.
+/*You are allowed to block this element in your css if you plan on making a custom css.*/
 #pleaseloveus {
     overflow: hidden;
     padding-right: 0.5em;
