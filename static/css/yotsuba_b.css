@@ -5,7 +5,7 @@ nav {
   border-bottom: 1px solid #89A;
   margin-left: -8px;
 }
-body {  background: #EEF2FF url("/.static/css/fade-blue.png") repeat-x 50% 0%; }
+body {  background: #EEF2FF url("https://mewch.net/.static/css/fade-blue.png") repeat-x 50% 0%; }
 #postingForm { padding: 3px; background: #D6DAF0; border: 1px solid #C6CAE0; }
 #postingForm th { background: #98E; border:0; font-variant: small-caps; text-align: center; padding-left: 0px; border: 1px solid #87D; }
 #postingForm > tbody:nth-child(1) > tr:nth-child(2) > th:nth-child(1) { font-size:0px; }
