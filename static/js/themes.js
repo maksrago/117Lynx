@@ -25,7 +25,7 @@ var themes = [ {
 }, {
   file : 'yotsuba_b.css',
   label : 'Yotsuba B',
-  id : 'yotsuba'
+  id : 'yotsubab'
 }, {
   file : 'darkelly.css',
   label : 'DarKelly',
