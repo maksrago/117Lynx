@@ -1,80 +1,48 @@
-/* Yotsuba B */
+body {
+    background: #EEF2FF url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUKJFjunj1HRMDAwNWzMiILsZIpDpcarDrx28GI17zUeUYiXITLrdg08PISKyfGfGYgT38cLkRm50Dbx9944KYdIUrbohNV0SoAwD1FwRwgMmDbgAAAABJRU5ErkJggg==') repeat-x 50% 0%;
+    color: #000000;
+    font-family: arial, helvetica, sans-serif;
+}
+a:hover {
+    color: red;
+}
+.innerPost {
+    background-color: #CED1E7;
+    border: 1px solid #B7C5D9;
+    border-left: none;
+    border-top: none;
+}
+.markedPost {
+    background-color: #D6BAD0;
+    border: 1px solid #B7C5D9;
+    border-left: none;
+}
 nav {
-  background-color: #D6DAF0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
-  border-bottom: 1px solid #89A;
-  margin-left: -8px;
+    background-color: #D5D9F0;
+    border-bottom: none;
 }
-body {  background: #EEF2FF url("https://mewch.net/.static/css/fade-blue.png") repeat-x 50% 0%; }
-#postingForm { padding: 3px; background: #D6DAF0; border: 1px solid #C6CAE0; }
-#postingForm th { background: #98E; border:0; font-variant: small-caps; text-align: center; padding-left: 0px; border: 1px solid #87D; }
-#postingForm > tbody:nth-child(1) > tr:nth-child(2) > th:nth-child(1) { font-size:0px; }
-#postingForm > tbody:nth-child(1) > tr:nth-child(2) > th:nth-child(1):before { font-size: 10pt; content:"Options"; }
-#postingForm td { background: 0; }
-hr { border-top: 1px solid #B7C5D9; }
-.innerPost, .markedPost {
-  background: #D6DAF0;
-  border-width: 1px;
-  border-style: none solid solid none;
-  border-color: #B7C5D9;
-  box-shadow: none;
+#postingForm th {
+    background-color: #9786EA;
 }
-.markedPost { background: #D6BAD0; }
-.title, .divMessage, input, select, textarea, .contentOmissionIndicator .labelOmission { font-size: 13px; }
-.title { font-weight: bold; }
-.contentOmissionIndicator .labelOmission { color: #707070; }
-#quick-reply th { background: #98E; }
-#quick-reply table { background: rgb(214, 218, 240); border: 1px solid #89A; }
-.close-btn { font-size: 10pt; }
-#divLatestPosts .latestPostCell { background: #D6DAF0; border: #B7C5D9; }
-.floatingMenu, .modalDecorationPanel {
-  background-color: rgb(183, 197, 217);
-  border: 1px solid #666;
-  font-size:10pt;
+#postingForm td {
+    background-color: transparent;
 }
-.floatingMenu hr { border-top: 1px solid #89A; margin: 2px; }
-div#panelMessage hr, input.deletionCheckBox, #themeSelector, #flagCombobox > option:nth-child(1), .watchButton, 
-.innerPost .hideButton, .boardHeader p#labelDescription { display:none; }
-a:hover { color:red; }
-.boardHeader p#labelName {
-  font-family: tahoma;
-  letter-spacing: -2px;
-  font-size: 20pt;
-  margin: 1em 0;
+#quick-reply table {
+    background-color: #D6DAF0;
+    border: none;
 }
-#postingForm button { margin:0; padding: 0; width: 79px; height: 19px; border-radius: 0px; position: relative; top: 1px; }
-p:nth-child(4), p.small:nth-child(5) { display: none; }
-
-/* Flags */
-.imgFlag {
-  transition: all ease-out .25s;
-  max-width: 32px;
-  max-height: 24px;
+#quick-reply table {
+    padding: 0em;
 }
-.imgFlag:hover {
-  transition: all ease-in .25s;
-  max-width: 32px;
-  max-height: 32px;
+#quick-reply th {
+    background-color: #9988EE;
+}
+#divLatestPosts .latestPostCell {
+    background: #D6BAD0;
+}
+.floatingMenu {
+    background-color: #BEC1D5;
+    border: 1px solid #000;
 }
 
-/* Board Announcement */
-#divMessage {
-  color: #000;
-  background: #D6DAF0;
-  border: 1px #B7C5D9 solid;
-  text-align: left;
-  font-weight: normal;
-  padding: 10px;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 11px;
-  max-height: 320px;
-}
 
-#divMessage span.redText { text-align: center; display: block;}
-#divMessage span.redText strong { color:blue; }
-
-/* Post Counter */
-body { counter-reset:postcount; }    
-#ipDelete + #panelMessage + #threadList .linkQuote:after { counter-increment: postcount; content: "#" counter(postcount); color: #0F6; text-shadow: 0px 1px 1px gray, 0px 1px 1px gray, 0px 0px 1px gray, 0px 0px 1px gray; margin-left: 0.5em; margin-right: 1em; }

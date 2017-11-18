@@ -71,7 +71,7 @@ function handleConnectionResponse(xhr, delegate) {
     popupInner.id = 'bypassPopUpInner';
 
     var popupText = document.createElement('span');
-    popupText.innerHTML = 'You are blocked, but you can use the block bypass to post. Do you want to get a block bypass?';
+    popupText.innerHTML = 'Would you like to fill out the captcha to make your post? Note: This is required every 24 hours for Tor users.';
     popupText.id = 'popupText';
 
     var cancelButton = document.createElement('button');
