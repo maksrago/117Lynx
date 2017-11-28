@@ -31,6 +31,18 @@ if (!DISABLE_JS && typeof (Storage) !== "undefined"
     nameField.value = localStorage.name || '';
   }
 
+  document.getElementById('alwaysUseBypassDiv').style.display = 'table-row';
+
+  var bypassCheckBox = document.getElementById('alwaysUseBypassCheckBox');
+
+  if (localStorage.ensureBypass && JSON.parse(localStorage.ensureBypass)) {
+    bypassCheckBox.checked = true;
+  }
+
+  bypassCheckBox.addEventListener('change', function() {
+    localStorage.setItem('ensureBypass', bypassCheckBox.checked);
+  });
+
   var flagCombo = document.getElementById('flagCombobox');
 
   if (flagCombo && localStorage.savedFlags) {
@@ -336,6 +348,49 @@ function getFilestToUpload(callback, currentIndex, files) {
   }
 
 }
+
+function displayBlockBypassPrompt(callback) {
+
+  var outerPanel = getCaptchaModal('You need a block bypass to post');
+
+  var okButton = outerPanel.getElementsByClassName('modalOkButton')[0];
+
+  okButton.onclick = function() {
+
+    var typedCaptcha = outerPanel.getElementsByClassName('modalAnswer')[0].value
+        .trim();
+
+    if (typedCaptcha.length !== 6 && typedCaptcha.length !== 24) {
+      alert('Captchas are exactly 6 (24 if no cookies) characters long.');
+      return;
+    } else if (/\W/.test(typedCaptcha)) {
+      alert('Invalid captcha.');
+      return;
+    }
+
+    apiRequest('renewBypass', {
+      captcha : typedCaptcha
+    }, function requestComplete(status, data) {
+
+      if (status === 'ok') {
+
+        document.cookie = 'bypass=' + data + '; path=/';
+
+        if (callback) {
+          callback();
+        }
+
+        outerPanel.remove();
+
+      } else {
+        alert(status + ': ' + JSON.stringify(data));
+      }
+    });
+
+  };
+
+}
+
 function storeUsedPostingPassword(boardUri, threadId, postId) {
   var storedData = JSON.parse(localStorage.postingPasswords || '{}');
   var key = boardUri + '/' + threadId

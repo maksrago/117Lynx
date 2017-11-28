@@ -183,36 +183,30 @@ function processThreadRequest() {
 
 function postThread() {
 
-  if (hiddenCaptcha) {
-    processFilesToPost();
-  } else {
-    var typedCaptcha = document.getElementById('fieldCaptcha').value.trim();
+  localRequest('/blockBypass.js?json=1',
+      function checked(error, response) {
 
-    if (typedCaptcha.length !== 6 && typedCaptcha.length !== 24) {
-      alert('Captchas are exactly 6 (24 if no cookies) characters long.');
-      return;
-    } else if (/\W/.test(typedCaptcha)) {
-      alert('Invalid captcha.');
-      return;
-    }
+        if (error) {
+          alert(error);
+          return;
+        }
 
-    if (typedCaptcha.length == 24) {
-      processFilesToPost(typedCaptcha);
-    } else {
-      var parsedCookies = getCookies();
+        var data = JSON.parse(response);
 
-      apiRequest('solveCaptcha', {
+        var alwaysUseBypass = document
+            .getElementById('alwaysUseBypassCheckBox').checked;
 
-        captchaId : parsedCookies.captchaid,
-        answer : typedCaptcha
-      }, function solvedCaptcha(status, data) {
+        if (!data.valid
+            && (data.mode == 2 || (data.mode == 1 && alwaysUseBypass))) {
 
-        processFilesToPost(parsedCookies.captchaid);
+          displayBlockBypassPrompt(function() {
+            processThreadRequest();
+          });
+
+        } else {
+          processThreadRequest();
+        }
 
       });
-    }
-
-  }
 
 }
-

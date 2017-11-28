@@ -859,10 +859,15 @@ function postReply() {
 
         var data = JSON.parse(response);
 
-        if (!data.valid
-            && (data.mode == 2 || (data.mode == 1))) {
+        var alwaysUseBypass = document
+            .getElementById('alwaysUseBypassCheckBox').checked;
 
+        if (!data.valid
+            && (data.mode == 2 || (data.mode == 1 && alwaysUseBypass))) {
+
+          displayBlockBypassPrompt(function() {
             processReplyRequest();
+          });
 
         } else {
           processReplyRequest();
