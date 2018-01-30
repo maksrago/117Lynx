@@ -1,4 +1,4 @@
-**117Lynx** is a fork of [PenumbraLynx]https://gitgud.io/LynxChan/PenumbraLynx).
+**117Lynx** is a fork of [PenumbraLynx](https://gitgud.io/LynxChan/PenumbraLynx).
 
 Install by cloning anywhere and then pointing it to the engine on the global settings. Make sure to check out the correct tag.
 
