@@ -81,6 +81,10 @@
   <a href="#" onclick="displayFunction()">[Start a New Thread]</a>
  </center>
 
+<div class="displayPostingForm">
+
+
+
   <div class="postingFormWrapper">
 
     <form
@@ -279,18 +283,7 @@
     </form>
 
   </div>
- <script>
-function displayFunction() {
-    var x = document.getElementById("postingFormWrapper");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
-</script>
-
-
+ <script src="displayPostingWrapper.js"></script> 
   <div id="panelMessage">
     <hr>
     <div id="divMessage"></div>
@@ -424,20 +417,16 @@ function displayFunction() {
             id="reportJsButton"
             onClick="reportPosts()"
             value="Report">
-
-
         </div>
-
       </fieldset>
      </div>
     </form>
-
   </div>
-
   <footer id="footer"></footer>
 
 </body>
 
+<script src="/.static/js/displayPostingWrapper.js"></script>
 <script src="/.static/js/settings.js"></script>
 <script src="/.static/js/api.js"></script>
 <script src="/.static/js/crypt.js"></script>
