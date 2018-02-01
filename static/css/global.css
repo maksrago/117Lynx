@@ -1,6 +1,7 @@
 .small {
-  font-size: 75%;
+  font-size: 10pt;
   text-decoration: none;
+  font-family: sans-serif;
 }
 
 .clearer {
@@ -16,11 +17,11 @@
 }
 
 #themeSelector {
-  font-size: 100%;
+  //font-size: 100%;
 }
 
 h3, p, label {
-  margin: 0.25em 0;
+ margin: 0.10em 0;
 }
 
 hr {
@@ -31,7 +32,7 @@ hr {
 }
 
 .coloredIcon {
-  color: #FFB300;
+  color: #81a2be;
   cursor: pointer
 }
 
@@ -45,7 +46,7 @@ hr {
 }
 
 a {
-  color: #FFB300;
+  color: #81a2be;
   text-decoration: none;
 }
 
@@ -70,22 +71,32 @@ em {
 }
 
 input, select, textarea {
-  border: 1px double #07371F;
-  border-radius: 5px;
-  background: #282A2E;
-  color: #ACACAC;
-  font-family: 'Hack', monospace, sans-serif;
-  font-size: 80%;
+   background: #FFFFFF;
+   color: #000000;
+   font-family: arial;
 }
 
-input[type=button], input[type=submit], button, .dropzone, .selectedCell
+input[type=button], button, .selectedCell
   {
-  border: 3px double #07371F;
-  border-radius: 5px;
-  background: #16171A;
-  color: #ACACAC;
+  border-radius: 1px;
+  font-family: sans-serif;
+  font-size: 100%;
+  cursor: pointer; 
+}
+
+.dropzone {
+  background: #DADCE3;
+  border: 3px dashed rgba(125, 125, 125, 0.4);
+  border-radius: 0px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 12pt;
+}
+
+input[type=submit] {
   padding-left: 0.25em;
-  font-family: 'Hack', monospace, sans-serif;
+  font-family: arial, sans-serif;
   font-size: 80%;
   font-weight: bold;
   margin-top: 0.5em;
@@ -93,7 +104,7 @@ input[type=button], input[type=submit], button, .dropzone, .selectedCell
   cursor: pointer;
 }
 
-.title, .unhideButton {
+.unhideButton {
   font-weight: bold;
 }
 
@@ -130,7 +141,7 @@ input[type=button], input[type=submit], button, .dropzone, .selectedCell
 body {
   color: #ACACAC;
   background: #1D1F21;
-  font-family: 'Hack', monospace, sans-serif;
+  font-family: sans-serif;
   font-size: 100%;
   margin: 0px;
 }
@@ -149,9 +160,10 @@ nav {
   background-color: #151515;
   border-bottom: 1px solid #B0790A;
   padding-bottom: 3px;
-  font-size: 70%;
+  font-size: 10pt;
   text-align: center;
   z-index: 1;
+  padding-top; 2px;
 }
 
 nav span, nav a {
@@ -222,7 +234,6 @@ a.rules:after {
   font-family: Icons;
   content: "\e052";
   margin-right: 0.5em;
-  color: #117743;
   height: 80%;
   font-size: 80%;
   padding-left: 0.25em;
@@ -363,4 +374,54 @@ footer {
 
 #divRemember input {
   display: inline;
+}
+
+.labelSubject, noEmailName {
+  color: #b294bb;
+}
+
+.panelBacklinks a {
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+/*Board header*/
+.boardHeader p {
+  color: #c5c8c6;
+  font-weight: bold;
+}
+
+#postingForm td {
+  background-color: transparent;
+  text-align: left;
+  padding: 0px;
+}
+
+#postingForm th {
+  background: #282a2e;
+  font-weight: bold;
+  text-align: left;
+  font-family: Arial;
+  width: 85px;
+  padding-left: 5px;
+  border: 1px solid #000;
+  font-size: 10pt;
+}
+
+#fieldMessage {
+  width: 350px;
+  height: 75px;
+}
+
+#alwaysUseBypassCheckBox {
+  float: right;
+}
+
+#postingForm label {
+  font-size: 11pt;
+  font-family: sans-serif;
+}
+
+.flagPreview {
+   height: 20px;
 }

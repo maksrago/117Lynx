@@ -1,11 +1,19 @@
 var themes = [ {
-  file : 'clear.css',
-  label : 'Clear',
-  id : 'clear'
+  file : 'yotsuba.css',
+  label : 'Yotsuba',
+  id : 'yotsuba'
 }, {
-  file : 'jungle.css',
-  label : 'Jungle',
-  id : 'jungle'
+  file : 'yotsuba_b.css',
+  label : 'Yotsuba B',
+  id : 'yotsuba b'
+}, {
+  file : 'proton.css',
+  label : 'Proton',
+  id : 'proton'
+}, {
+  file : 'sfw.css',
+  label : 'Safe For Work',
+  id : 'safeforwork'
 } ];
 
 var addedTheme;

@@ -59,8 +59,6 @@
   padding-left: 0.25em;
   padding-top: 0.25em;
   max-width: 100%;
-  border: 1px solid #117743;
-  border-radius: 5px;
 }
 
 .markedPost {
@@ -69,7 +67,6 @@
 
 .linkName {
   font-weight: bold;
-  color: #34ED97;
 }
 
 .linkName:hover {
@@ -77,12 +74,7 @@
 }
 
 .noEmailName, .noEmailName:hover {
-  color: #117743;
   text-shadow: none;
-}
-
-.quoteLink {
-  color: #ff0000;
 }
 
 .linkSelf {
@@ -104,7 +96,6 @@
 }
 
 .labelSubject {
-  color: #34ED3A;
   font-weight: bold;
 }
 
@@ -184,8 +175,6 @@
 
 .panelBacklinks a {
   padding-left: 0.5em;
-  color: #AA0000;
-  text-decoration: none;
 }
 
 .hideLink {
@@ -217,11 +206,6 @@
 .imgFlag {
   max-width: 16px;
   max-height: 16px;
-}
-
-/*Board header*/
-.boardHeader p {
-  color: #663E11;
 }
 
 .boardHeader p#labelName {

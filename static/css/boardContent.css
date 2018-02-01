@@ -1,4 +1,19 @@
 /*Elements shown on board and thread pages*/
+.postingFormWrapper {
+  text-align: center;
+  width: 100%;
+}
+
+#postingForm {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+#postingForm td {
+  text-align: left;
+}
+
 .selectedCell, .dropzone {
   top: 5px;
   text-align: center;
@@ -8,6 +23,10 @@
 
 .selectedCell {
   margin-top: 10px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
 }
 
 .dropzone {
@@ -38,10 +57,6 @@
   color: #7D7D7D;
 }
 
-#panelMessage {
-  margin: 1em;
-}
-
 #flagCombobox {
   display: inline-block;
   width: 85%;
@@ -50,19 +65,20 @@
 
 .flagPreview {
   display: inline-block;
-  max-width: 10%;
-  height: 16px;
 }
-
-#postBox div.wider input, #flagsDiv, .modalDecorationPanel input[type='text'],
-  .modalDecorationPanel select, .modalDecorationPanel textarea {
+.modalDecorationPanel select, .modalDecorationPanel textarea {
   width: 100%;
   display: block;
   margin-bottom: 0.25em;
 }
+#postBox div.wider input, #flagsDiv {
 
-#flagsDiv {
-  margin-top: 0.5em;
+  width: 100%;
+  margin-bottom: 0.25em;
+}
+
+#flagsDiv, #flagsDiv select {
+  width: 100%;
 }
 
 #postBox textarea {
@@ -80,15 +96,6 @@
   width: 25em;
 }
 
-#newPostFieldset, #quick-reply table, .modalDecorationPanel {
-  border: 1px dashed #117743;
-}
-
-#postingForm {
-  text-align: center;
-  margin: 1em auto;
-}
-
 #postBox {
   text-align: left;
 }
@@ -97,43 +104,11 @@
   margin-top: 0.5em;
 }
 
-#postBox input:focus, #postBox textarea:focus, .modalDecorationPanel input[type='text']:focus,
-  #settingsMenu input[type='text']:focus, #settingsMenu textarea:focus {
-  box-shadow: 0px 0px 5px 2px #117743;
-}
 
-#postingForm button, #qrbutton {
+#qrbutton {
   width: 8em;
   margin: 0.5em auto;
   font-size: 125%;
-}
-
-#postingForm button:active {
-  box-shadow: 0px 0px 5px #117743;
-}
-
-#postingForm label {
-  font-size: 80%;
-}
-
-input[type=checkbox].postingCheckbox {
-  display: none;
-}
-
-input[type=checkbox].postingCheckbox+label:before {
-  font-family: Icons;
-  content: "\e0db";
-  margin-right: 0.5em;
-  color: #117743;
-  display: inline-block;
-}
-
-input[type=checkbox].postingCheckbox:checked+label:before {
-  font-family: Icons;
-  content: "\e033";
-  margin-right: 0.5em;
-  color: #117743;
-  display: inline-block;
 }
 
 #boardContentLinks {
@@ -141,6 +116,27 @@ input[type=checkbox].postingCheckbox:checked+label:before {
   font-size: 80%;
 }
 
+#qrFlagsDiv{
+  font-size:0px;
+}
+.modalDecorationPanel input[type='text'], .modalDecorationPanel{
+  display: block;
+}
+#postBox div.wider input, #flagsDiv, .modalDecorationPanel 
+#input[type='text']
+  {
+  width: 100%;
+  margin-bottom: 0.25em;
+}
+#newPostFieldset, #quick-reply table, .modalDecorationPanel {
+  border: 1px dashed;
+}
+
+#postBox input:focus, #postBox textarea:focus, .modalDecorationPanel 
+#input[type='text']:focus
+  {
+  box-shadow: 0px 0px 5px 2px #117743;
+}
 .modalPanel {
   position: fixed;
   width: 100%;
@@ -159,7 +155,7 @@ input[type=checkbox].postingCheckbox:checked+label:before {
 }
 
 .modalDecorationPanel {
-  background: #1D1F21;
+  background: #FFCCCB;
   padding: 10px;
   display: inline-block;
 }
