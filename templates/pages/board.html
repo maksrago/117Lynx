@@ -80,11 +80,7 @@
  <center>
   <a href="#" onclick="displayFunction()">[Start a New Thread]</a>
  </center>
-
-<div class="displayPostingForm">
-
-
-
+<div id = "displayPostingFormWrapper">
   <div class="postingFormWrapper">
 
     <form
@@ -283,7 +279,17 @@
     </form>
 
   </div>
- <script src="displayPostingWrapper.js"></script> 
+<div>
+<script>
+function displayFunction() {
+    var x = document.getElementById("displayPostingFormWrapper");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script> 
   <div id="panelMessage">
     <hr>
     <div id="divMessage"></div>
@@ -426,7 +432,6 @@
 
 </body>
 
-<script src="/.static/js/displayPostingWrapper.js"></script>
 <script src="/.static/js/settings.js"></script>
 <script src="/.static/js/api.js"></script>
 <script src="/.static/js/crypt.js"></script>
