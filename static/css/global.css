@@ -397,6 +397,10 @@ footer {
   padding: 0px;
 }
 
+#showPostWrapper {
+  display: none;
+}
+
 #postingForm th {
   background: #282a2e;
   font-weight: bold;
@@ -434,4 +438,9 @@ footer {
 
 .quoteTooltip {
   border-style: 0px none none;
+}
+
+#newThreadText {
+  font-size: 18pt;
+  font-weight: none;
 }

@@ -77,10 +77,10 @@
     <p id="labelDescription"></p>
   </header>
 
- <center>
-  <a href="#" onclick="displayFunction()">[Start a New Thread]</a>
- </center>
-<div id = "displayPostingFormWrapper">
+ <center><div id="newThreadText">
+  [<a href="#" onclick="displayFunction()">Start a New Thread</a>]
+ </div></center>
+<div id="showPostWrapper">
   <div class="postingFormWrapper">
 
     <form
@@ -279,17 +279,16 @@
     </form>
 
   </div>
-<div>
+</div>
 <script>
 function displayFunction() {
-    var x = document.getElementById("displayPostingFormWrapper");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+    var x = document.getElementById("showPostWrapper");
+    var y = document.getElementById("newThreadText");
+    x.style.display = "block";
+    y.style.display = "none";
 }
 </script> 
+
   <div id="panelMessage">
     <hr>
     <div id="divMessage"></div>
@@ -297,12 +296,6 @@ function displayFunction() {
   </div>
 
   <div id="threadList">
-  <hr>
-  <div id="pleaseloveus" style="text-align: center;"><a href="http://www.gaming-adult.com/9402061c-9d05-409b-9a83-79d862ad03b7?deaf=FRA2-728x90"><img src="/.static/FRA2-728x90.gif" alt="Sexy game" title="Sexy game"></a></div>
-    <form
-      action="/contentActions.js"
-      method="post"
-      enctype="multipart/form-data">
 
       <div id="divThreads"></div>
 
