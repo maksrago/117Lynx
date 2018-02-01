@@ -26,9 +26,9 @@ h3, p, label {
 
 hr {
   height: 0px;
-  border-width: 1px medium medium;
+  border-width: 2px medium;
   border-style: solid none none;
-  border-color: #117743;
+  border-color: #282a2e;
 }
 
 .coloredIcon {
@@ -157,9 +157,9 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #151515;
-  border-bottom: 1px solid #B0790A;
+  background-color: #282a2e;
   padding-bottom: 3px;
+  padding-top: 3px;
   font-size: 10pt;
   text-align: center;
   z-index: 1;
@@ -274,7 +274,7 @@ span.spoiler {
 }
 
 #settingsFieldset {
-  border: 1px dashed #117743;
+  border: 2px solid #282a2e;
   padding: 1em;
   display: inline-block;
   text-align: left;
@@ -314,7 +314,7 @@ span.spoiler {
 }
 
 .captchaTimer {
-  font-size: 80%;
+  font-size: 100%;
 }
 
 input.wide, textarea.wide {
@@ -337,7 +337,7 @@ input.wide, textarea.wide {
 #staticPageFieldset {
   display: inline-block;
   padding: 0.5em 1em;
-  border: 1px dashed #117743;
+  border: 2px solid #282a2e;
   text-align: left;
 }
 
@@ -359,7 +359,7 @@ footer {
 }
 
 .floatingMenu {
-  border: 1px dashed #117743;
+  border: 2px solid #282a2e;
   background: #1d1f21;
   padding: 0.25em;
 }
@@ -413,15 +413,25 @@ footer {
   height: 75px;
 }
 
-#alwaysUseBypassCheckBox {
-  float: right;
-}
-
 #postingForm label {
   font-size: 11pt;
   font-family: sans-serif;
 }
 
 .flagPreview {
-   height: 20px;
+  height: 20px;
+}
+
+.reportFieldset {
+  border-width: 2px medium;
+  border-color: #282a2e;
+}
+
+/* Hides the linkPreview or the [Preview] -- Temporary */
+.linkPreview {
+  display: none;
+}
+
+.quoteTooltip {
+  border-style: 0px none none;
 }
