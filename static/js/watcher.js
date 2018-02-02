@@ -4,6 +4,90 @@ var isInThread = document.getElementById('threadIdentifier') ? true : false;
 var watcherAlertCounter = 0;
 var elementRelation = {};
 
+var watcherDragInfo = {}
+
+function stopMovingWatched() {
+
+  if (!watcherDragInfo.shouldMove) {
+    return;
+  }
+
+  watcherDragInfo.shouldMove = false
+  lockedDrag = false
+
+  var body = document.getElementsByTagName('body')[0];
+
+  body.onmouseup = watcherDragInfo.originalMouseUp;
+}
+
+function startMovingWatched(evt) {
+
+  if (watcherDragInfo.shouldMove || (typeof (lockedDrag) != 'undefined')
+      && lockedDrag) {
+    return;
+  }
+
+  evt.preventDefault();
+
+  lockedDrag = true;
+
+  var body = document.getElementsByTagName('body')[0];
+
+  watcherDragInfo.originalMouseUp = body.onmouseup;
+
+  body.onmouseup = function() {
+    stopMovingWatched();
+  };
+
+  watcherDragInfo.shouldMove = true;
+
+  evt = evt || window.event;
+
+  var rect = watchedMenu.getBoundingClientRect();
+
+  watcherDragInfo.diffX = evt.clientX - rect.right;
+  watcherDragInfo.diffY = evt.clientY - rect.top;
+
+}
+
+var moveWatched = function(evt) {
+
+  if (!watcherDragInfo.shouldMove) {
+    return;
+  }
+
+  evt = evt || window.event;
+
+  var newX = (window.innerWidth - evt.clientX) + watcherDragInfo.diffX;
+  var newY = evt.clientY - watcherDragInfo.diffY;
+
+  if (newX < 0) {
+    newX = 0;
+  }
+
+  if (newY < 0) {
+    newY = 0;
+  }
+
+  var watchedPanel = document.getElementById('watchedMenu');
+
+  var upperXLimit = document.body.clientWidth - watchedPanel.offsetWidth;
+
+  if (newX > upperXLimit) {
+    newX = upperXLimit;
+  }
+
+  var upperYLimit = window.innerHeight - watchedPanel.offsetHeight;
+
+  if (newY > upperYLimit) {
+    newY = upperYLimit;
+  }
+
+  watchedPanel.style.right = newX + 'px';
+  watchedPanel.style.top = newY + 'px';
+
+};
+
 if (!DISABLE_JS) {
 
   var postingLink = document.getElementById('navPosting');
@@ -22,7 +106,7 @@ if (!DISABLE_JS) {
   var watcherButton = document.createElement('a');
   watcherButton.innerHTML = 'watched threads';
   watcherButton.id = 'watcherButton';
-  watcherButton.className = 'coloredIcon';
+  watcherButton.setAttribute('class', 'coloredIcon');
 
   var watcherCounter = document.createElement('span');
 
@@ -35,18 +119,24 @@ if (!DISABLE_JS) {
   var watchedMenuLabel = document.createElement('label');
   watchedMenuLabel.innerHTML = 'Watched threads';
 
+  watchedMenuLabel.onmousedown = function(event) {
+    startMovingWatched(event);
+  };
+
   watchedMenu.appendChild(watchedMenuLabel);
 
   var showingWatched = false;
 
   var closeWatcherMenuButton = document.createElement('span');
   closeWatcherMenuButton.id = 'closeWatcherMenuButton';
-  closeWatcherMenuButton.className = 'coloredIcon glowOnHover';
+  closeWatcherMenuButton.setAttribute('class', 'coloredIcon');
   closeWatcherMenuButton.onclick = function() {
-
     if (!showingWatched) {
       return;
     }
+
+    var body = document.getElementsByTagName('body')[0];
+    body.removeEventListener('mousemove', moveWatched);
 
     showingWatched = false;
     watchedMenu.style.display = 'none';
@@ -58,7 +148,7 @@ if (!DISABLE_JS) {
   watchedMenu.appendChild(document.createElement('hr'));
 
   watchedMenu.id = 'watchedMenu';
-  watchedMenu.className = 'floatingMenu';
+  watchedMenu.setAttribute('class', 'floatingMenu');
   watchedMenu.style.display = 'none';
 
   document.body.appendChild(watchedMenu);
@@ -69,7 +159,12 @@ if (!DISABLE_JS) {
       return;
     }
 
+    var body = document.getElementsByTagName('body')[0];
+
+    body.addEventListener('mousemove', moveWatched);
+
     showingWatched = true;
+
     watchedMenu.style.display = 'block';
 
   }
@@ -106,8 +201,6 @@ if (!DISABLE_JS) {
   updateWatcherCounter();
 
   scheduleWatchedThreadsCheck();
-
-  setDraggable(watchedMenu, watchedMenuLabel);
 
 }
 
@@ -248,10 +341,10 @@ function addWatchedCell(board, thread, watchData) {
   var cellWrapper = document.createElement('div');
 
   var cell = document.createElement('div');
-  cell.className = 'watchedCell';
+  cell.setAttribute('class', 'watchedCell');
 
   var labelWrapper = document.createElement('label');
-  labelWrapper.className = 'watchedCellLabel';
+  labelWrapper.setAttribute('class', 'watchedCellLabel');
 
   var label = document.createElement('a');
   label.innerHTML = watchData.label || (board + '/' + thread);
@@ -259,7 +352,7 @@ function addWatchedCell(board, thread, watchData) {
   labelWrapper.appendChild(label);
 
   var notification = document.createElement('span');
-  notification.className = 'watchedNotification';
+  notification.setAttribute('class', 'watchedNotification');
 
   if (!elementRelation[board]) {
     elementRelation[board] = {};
@@ -278,7 +371,7 @@ function addWatchedCell(board, thread, watchData) {
   cell.appendChild(labelWrapper);
 
   var button = document.createElement('span');
-  button.className = 'watchedCellCloseButton glowOnHover coloredIcon';
+  button.setAttribute('class', 'watchedCellCloseButton coloredIcon');
   cell.appendChild(button);
 
   button.onclick = function() {
@@ -315,7 +408,7 @@ function processOP(op) {
   var thread = nameParts[1];
 
   var watchButton = document.createElement('span');
-  watchButton.className = 'watchButton glowOnHover coloredIcon';
+  watchButton.setAttribute('class', 'watchButton coloredIcon');
   watchButton.title = "Watch Thread";
 
   checkBox.parentNode.insertBefore(watchButton,

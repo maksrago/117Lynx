@@ -1,18 +1,99 @@
 //I didn't write this originally.
 //I just tried to make it less shit.
-
 var qrFlagCombo;
-var qrPanel;
+var qrInfo = {}
 
-function removeQr() {
-  qrPanel.style.display = 'none';
+function stopMoving() {
+
+  if (!qrInfo.shouldMove) {
+    return;
+  }
+
+  qrInfo.shouldMove = false
+  lockedDrag = false
+
+  var body = document.getElementsByTagName('body')[0];
+
+  body.onmouseup = qrInfo.originalMouseUp;
+
 }
+
+function startMoving(evt) {
+
+  if (qrInfo.shouldMove || (typeof (lockedDrag) != 'undefined') && lockedDrag) {
+    return;
+  }
+
+  evt.preventDefault();
+  
+  lockedDrag = true;
+
+  var body = document.getElementsByTagName('body')[0];
+
+  qrInfo.originalMouseUp = body.onmouseup;
+
+  body.onmouseup = function() {
+    stopMoving();
+  };
+
+  qrInfo.shouldMove = true;
+
+  evt = evt || window.event;
+
+  var qrPanel = document.getElementById('quick-reply');
+
+  var rect = qrPanel.getBoundingClientRect();
+
+  qrInfo.diffX = evt.clientX - rect.right;
+  qrInfo.diffY = evt.clientY - rect.top;
+
+}
+
+var move = function(evt) {
+
+  if (!qrInfo.shouldMove) {
+    return;
+  }
+
+  evt = evt || window.event;
+
+  var newX = (window.innerWidth - evt.clientX) + qrInfo.diffX;
+  var newY = evt.clientY - qrInfo.diffY;
+
+  if (newX < 0) {
+    newX = 0;
+  }
+
+  if (newY < 0) {
+    newY = 0;
+  }
+
+  var qrPanel = document.getElementById('quick-reply');
+
+  var upperXLimit = document.body.clientWidth - qrPanel.offsetWidth;
+
+  if (newX > upperXLimit) {
+    newX = upperXLimit;
+  }
+
+  var upperYLimit = window.innerHeight - qrPanel.offsetHeight;
+
+  if (newY > upperYLimit) {
+    newY = upperYLimit;
+  }
+
+  qrPanel.style.right = newX + 'px';
+  qrPanel.style.top = newY + 'px';
+
+};
 
 function showQr(quote) {
 
   setQr();
 
-  qrPanel.style.display = 'block';
+  var body = document.getElementsByTagName('body')[0];
+
+  body.addEventListener('mousemove', move);
 
   document.getElementById('qrbody').value += '>>' + quote + '\n';
 
@@ -42,9 +123,16 @@ function registerSync(source, destination, field, event) {
 
 }
 
+function removeQr() {
+  document.getElementById('quick-reply').remove();
+  qrFlagCombo = null;
+  var body = document.getElementsByTagName('body')[0];
+  body.removeEventListener('mousemove', move);
+}
+
 function setQr() {
 
-  if (qrPanel) {
+  if (document.getElementById('quick-reply')) {
     return;
   }
 
@@ -57,8 +145,9 @@ function setQr() {
   var qrhtml = '<div id="quick-reply" style="right: 25px; top: 50px;">';
   qrhtml += '<div id="post-form-inner">';
   qrhtml += '<table class="post-table"><tbody> <tr><th colspan="2">';
-  qrhtml += '<span class="handle">';
-  qrhtml += '<a class="close-btn coloredIcon"';
+  qrhtml += '<span class="handle" ';
+  qrhtml += 'onmousedown=\'startMoving(event);\'>';
+  qrhtml += '<a class="close-btn"';
   qrhtml += ' onclick=\'removeQr();\'></a>';
   qrhtml += 'Quick Reply</span></th> </tr>';
 
@@ -82,7 +171,7 @@ function setQr() {
   qrhtml += '</textarea></td></tr> ';
 
   qrhtml += '<tr><td colspan="2">';
-  qrhtml += '<input id="qrpassword" type="text" placeholder="Password"></td></tr>';
+  qrhtml += '<input id="qrpassword" type="password" placeholder="Password"></td></tr>';
 
   var noFlagDiv = document.getElementById('noFlagDiv');
 
@@ -92,11 +181,6 @@ function setQr() {
     qrhtml += '<label for="qrcheckboxNoFlag" class="spoilerCheckbox">';
     qrhtml += 'Don\'t show location</label></td></tr>';
   }
-
-  qrhtml += '<tr><td class="centered" colspan="2"><input type="checkbox" ';
-  qrhtml += 'id="qralwaysUseBypassCheckBox" class="postingCheckbox">';
-  qrhtml += '<label for="qralwaysUseBypassCheckBox" class="spoilerCheckbox">';
-  qrhtml += 'Make sure I have a block bypass</label></td></tr>';
 
   if (flags) {
     qrhtml += '<tr><td colspan="2"><div id="qrFlagsDiv"></div></td></tr>';
@@ -136,20 +220,15 @@ function setQr() {
 
   qrhtml += '</tbody> </table></div></div>';
 
-  qrPanel = document.createElement('div');
-  qrPanel.innerHTML = qrhtml;
-  qrPanel = qrPanel.children[0];
+  var newDiv = document.createElement('div');
+  newDiv.innerHTML = qrhtml;
 
-  setDraggable(qrPanel, qrPanel.getElementsByClassName('handle')[0]);
-
-  document.body.appendChild(qrPanel);
+  document.body.appendChild(newDiv.children[0]);
 
   registerSync('fieldEmail', 'qremail', 'value', 'input');
   registerSync('fieldSubject', 'qrsubject', 'value', 'input');
   registerSync('fieldMessage', 'qrbody', 'value', 'input');
   registerSync('fieldPostingPassword', 'qrpassword', 'value', 'input');
-  registerSync('alwaysUseBypassCheckBox', 'qralwaysUseBypassCheckBox',
-      'checked', 'change');
 
   if (noFlagDiv) {
     registerSync('checkboxNoFlag', 'qrcheckboxNoFlag', 'checked', 'change');
@@ -175,7 +254,6 @@ function setQr() {
     document.getElementById('qrFlagsDiv').innerHTML = document
         .getElementById('flagsDiv').innerHTML.replace('flagCombobox',
         'qrFlagCombobox');
-
     qrFlagCombo = document.getElementById('qrFlagCombobox');
 
     setFlagPreviews(qrFlagCombo)

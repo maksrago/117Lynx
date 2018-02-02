@@ -1,104 +1,4 @@
 var shownMenu;
-var filtered = [];
-
-function filterMatches(string, filter) {
-
-  var toRet;
-
-  if (!filter.regex) {
-    toRet = string.indexOf(filter.filter) >= 0;
-  } else {
-    toRet = string.match(new RegExp(filter.filter)) ? true : false;
-  }
-
-  return toRet;
-
-}
-
-function hideForFilter(checkbox) {
-
-  var toHide = checkbox.parentNode.parentNode.parentNode;
-
-  toHide.style.display = 'none';
-  filtered.push(toHide);
-
-  return true;
-}
-
-function checkFilters() {
-
-  for (var i = 0; i < filtered.length; i++) {
-    filtered[i].style.display = 'block';
-  }
-
-  filtered = [];
-
-  var checkboxes = document.getElementsByClassName('deletionCheckBox');
-
-  for (var i = 0; i < checkboxes.length; i++) {
-    checkFilterHiding(checkboxes[i]);
-  }
-
-}
-
-function checkFilterHiding(checkbox) {
-
-  for (var i = 0; i < loadedFilters.length; i++) {
-
-    var filter = loadedFilters[i];
-
-    if (filter.type < 2) {
-      var name = checkbox.parentNode.getElementsByClassName('linkName')[0].innerHTML;
-
-      if (name.indexOf('#') >= 0) {
-
-        var trip = name.substring(name.lastIndexOf('#') + 1);
-
-        name = name.substring(0, name.indexOf('#'));
-
-      }
-
-    }
-
-    switch (filter.type) {
-
-    case 0: {
-      if (filterMatches(name, filter)) {
-        return hideForFilter(checkbox);
-      }
-      break;
-    }
-
-    case 1: {
-      if (trip && filterMatches(trip, filter)) {
-        return hideForFilter(checkbox);
-      }
-      break;
-    }
-
-    case 2: {
-      var subjectLabel = checkbox.parentNode
-          .getElementsByClassName('labelSubject')[0];
-
-      if (subjectLabel && filterMatches(subjectLabel.innerHTML, filter)) {
-        return hideForFilter(checkbox);
-      }
-      break;
-    }
-
-    case 3: {
-      if (filterMatches(checkbox.parentNode.parentNode
-          .getElementsByClassName('divMessage')[0].innerHTML, filter)) {
-        return hideForFilter(checkbox);
-      }
-      break;
-    }
-
-    }
-
-  }
-
-}
 
 function registerHiding(board, thread, post, unhiding) {
 
@@ -140,17 +40,16 @@ function setHideMenu(checkbox) {
   var post = parts[2];
 
   var hideButton = document.createElement('span');
-  hideButton.className = 'hideButton glowOnHover coloredIcon';
+  hideButton.className = 'hideButton coloredIcon';
   hideButton.title = "Hide";
 
   checkbox.parentNode.insertBefore(hideButton, checkbox.nextSibling);
 
   var hideMenu = document.createElement('div');
-  hideMenu.className = 'floatingMenu hideMenu';
+  hideMenu.className = 'floatingMenu';
   hideMenu.style.display = 'none';
   hideMenu.style.position = 'absolute';
-
-  var postHideButton;
+var postHideButton;
   postHideButton = document.createElement('label');
 
   if (post) {
@@ -165,42 +64,11 @@ function setHideMenu(checkbox) {
 
     hideMenu.appendChild(document.createElement('hr'));
 
-    var threadHideButton = document.createElement('label');
+
+ var threadHideButton = document.createElement('label');
     threadHideButton.innerHTML = 'Hide thread';
     hideMenu.appendChild(threadHideButton);
 
-  }
-
-  hideMenu.appendChild(document.createElement('hr'));
-
-  var name = checkbox.parentNode.getElementsByClassName('linkName')[0].innerHTML;
-
-  var trip;
-
-  if (name.indexOf('#') >= 0) {
-    trip = name.substring(name.lastIndexOf('#') + 1);
-    name = name.substring(0, name.indexOf('#'));
-  }
-
-  var filterNameButton = document.createElement('label');
-  filterNameButton.innerHTML = 'Filter name';
-  filterNameButton.onclick = function() {
-    createFilter(name, false, 0);
-  };
-  hideMenu.appendChild(filterNameButton);
-
-  hideMenu.appendChild(document.createElement('hr'));
-
-  if (trip) {
-
-    var filterTripButton = document.createElement('label');
-    filterTripButton.innerHTML = 'Filter tripcode';
-    filterTripButton.onclick = function() {
-      createFilter(trip, false, 1);
-    };
-    hideMenu.appendChild(filterTripButton);
-
-    hideMenu.appendChild(document.createElement('hr'));
   }
 
   document.body.appendChild(hideMenu);
@@ -227,7 +95,7 @@ function setHideMenu(checkbox) {
       + (post || thread) + ']';
 
   unhidePostButton.innerHTML = unhideHTML;
-  unhidePostButton.className = 'unhideButton glowOnHover';
+  unhidePostButton.className = 'unhideButton';
   unhidePostButton.style.display = 'none';
   checkbox.parentNode.parentNode.parentNode.insertBefore(unhidePostButton,
       checkbox.parentNode.parentNode);
@@ -242,6 +110,7 @@ function setHideMenu(checkbox) {
 
   };
 
+
   postHideButton.onclick = function() {
     checkbox.parentNode.parentNode.style.display = 'none';
     unhidePostButton.style.display = 'inline';
@@ -255,7 +124,7 @@ function setHideMenu(checkbox) {
 
     unhideThreadButton.innerHTML = '[Unhide thread ' + board + '/' + thread
         + ']';
-    unhideThreadButton.className = 'unhideButton glowOnHover';
+    unhideThreadButton.className = 'unhideButton';
     unhideThreadButton.style.display = 'none';
     checkbox.parentNode.parentNode.parentNode.parentNode.insertBefore(
         unhideThreadButton, checkbox.parentNode.parentNode.parentNode);
@@ -274,8 +143,6 @@ function setHideMenu(checkbox) {
     }
 
   }
-
-  checkFilterHiding(checkbox);
 
   var storedHidingData = localStorage.hidingData;
 
