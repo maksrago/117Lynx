@@ -313,12 +313,12 @@ function displayFunction() {
           <span>/</span>
           <a id="linkModeration">Moderate Board</a>
 	  <span>/</span>
-	  <a id="capbutton" href="#footer" onclick="showDiv()">Report Boxes</a>
+	  <a id="capbutton" href="#footer" onclick="toggleBoxes()">Report Boxes</a>
           <span>]</span>
         </div>
-
       </div>
-     <div id="hiddenboxes">
+
+     <div id="hiddenboxes" style="display:none">
       <fieldset class="reportFieldset">
         <legend>Delete</legend>
 
@@ -421,6 +421,16 @@ function displayFunction() {
      </div>
     </form>
   </div>
+<script>
+function toggleBoxes() {
+    var x = document.getElementById("hiddenboxes");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script> 
   <footer id="footer"></footer>
 
 </body>

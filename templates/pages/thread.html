@@ -430,12 +430,6 @@
   </div>
 
   <div id="threadList">
-  <hr>
-  <div id="pleaseloveus" style="text-align: center;"><a href="http://www.gaming-adult.com/9402061c-9d05-409b-9a83-79d862ad03b7?deaf=FRA2-728x90"><img src="/.static/FRA2-728x90.gif" alt="Sexy game" title="Sexy game"></a></div>
-    <form
-      method="post"
-      action="/contentActions.js"
-      enctype="multipart/form-data">
 
       <div id="divThreads"></div>
 
@@ -466,10 +460,10 @@
         <span>/</span>
         <a id="linkMod">Moderate Thread</a>
 	<span>/</span>
-	<a id="capbutton" href="#footer" onclick="showDiv()">Report Boxes</a>
+	<a id="capbutton" href="#footer" onclick="toggleBoxes()">Report Boxes</a>
         <span>]</span>
       </div>
-    <div id="hiddenboxes">
+    <div id="hiddenboxes" style="display:none">
       <fieldset class="reportFieldset">
         <legend>Delete</legend>
 
@@ -651,7 +645,16 @@
     </form>
 
   </div>
-
+<script>
+function toggleBoxes() {
+    var x = document.getElementById("hiddenboxes");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script> 
   <footer id="footer"></footer>
 
 </body>
