@@ -74,7 +74,6 @@
 }
 
 .linkSelf {
-  color: #ACACAC;
   text-decoration: none;
 }
 
@@ -83,7 +82,6 @@
 }
 
 .linkQuote {
-  color: #ACACAC;
   text-decoration: none;
 }
 
@@ -205,7 +203,6 @@
 }
 
 .boardHeader p#labelName {
-  font-size: 200%;
   display: inline-block;
 }
 

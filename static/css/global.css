@@ -78,12 +78,13 @@ input, select, textarea {
 ;
 }
 
-input[type=button], button, .selectedCell
+input[type=button], button, .selectedCell, #searchButton
   {
-  border-radius: 1px;
   font-family: arial, helvetica, sans-serif;
   font-size: 100%;
   cursor: pointer; 
+  border-radius: 0px;
+  border: 1px solid #AAAAAA;
 }
 
 .dropzone {
@@ -100,7 +101,6 @@ input[type=submit] {
   padding-left: 0.25em;
   font-family: arial, helvetica, sans-serif;;
   font-size: 80%;
-  font-weight: bold;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   cursor: pointer;
@@ -166,6 +166,7 @@ nav {
   text-align: center;
   z-index: 1;
   padding-top; 2px;
+  border-bottom: 1px solid #000;
 }
 
 nav span, nav a {
@@ -418,6 +419,7 @@ footer {
 #fieldMessage {
   width: 350px;
   height: 75px;
+  font-size: 10pt;
 }
 
 #postingForm label {
@@ -429,8 +431,7 @@ footer {
 }
 
 .reportFieldset {
-  border-width: 1px medium;
-  border-color: #282a2e;
+  border: 2px solid #282a2e;
 }
 
 /* Hides the linkPreview or the [Preview] -- Temporary */
@@ -447,12 +448,6 @@ footer {
   font-weight: bold;
   font-family: arial, helvetica, sans-serif;
   padding-bottom: 10px;
-}
-
-#labelName {
-  font-family: 'Tahoma', sans-serif;
-  font-weight: bold;
-  font-size: 28pt;
 }
 
 .noEmailName {
@@ -474,10 +469,8 @@ footer {
 }
 
 .catalogCell {
-  //border: 1px solid #117743;
-  //background: #282A2E;
   height: 25em;
-  //overflow-y: auto;
+  font-size: 13pt;
 }
 
 .embedButton {
@@ -497,7 +490,7 @@ footer {
   border: 1px solid #000;
 }
 
-.linkName.noEmailName:hover, a:link:hover, .linkQuote:hover, a:hover {
+.linkName.noEmailName:hover, a:link:hover, a:hover, .linkQuote:hover, .linkQuote:focus {
   color: #81a2be;
 }
 
@@ -507,4 +500,40 @@ footer {
 
 #boardContentLinks {
   text-align: right;
+}
+
+#catalogId, .boardHeader p#labelName, #labelName {
+  font-family: 'Tahoma', sans-serif;  
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+#postingForm {
+  display: inline-block;
+}
+
+#wholePostingForm {
+  display: none;
+}
+
+.footerBar {
+  padding-top: 10px;
+}
+
+#divBoards {
+  font-size: 12pt;
+}
+
+#postingForm button, #qrbutton {
+  border: 1px solid #AAAAAA;
+  padding: 2px 10px 2px 10px;
+  text-decoration: none;
+  color: #000;
+  background-color: f4f5f5;
+  width: 5em;
+  border-radius: 3px;
+}
+
+.linkSelf, .linkQuote {
+  color: #c5c8c6
 }

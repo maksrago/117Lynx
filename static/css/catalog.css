@@ -6,7 +6,6 @@
 #catalogId {
   text-align: center;
   margin: 1.5em 0 1em 0;
-  font-size: 150%;
 }
 
 .catalogCell {
@@ -16,10 +15,6 @@
   padding: 0.25em;
   overflow: hidden;
   margin: 0.1em;
-}
-
-.catalogLabel {
-  font-size: 80%;
 }
 
 .catalogCell .divMessage {
