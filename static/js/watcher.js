@@ -104,7 +104,7 @@ if (!DISABLE_JS) {
       referenceNode);
 
   var watcherButton = document.createElement('a');
-  watcherButton.innerHTML = 'watched threads';
+  watcherButton.innerHTML = 'Watched Threads';
   watcherButton.id = 'watcherButton';
   watcherButton.setAttribute('class', 'coloredIcon');
 
@@ -117,7 +117,7 @@ if (!DISABLE_JS) {
   watchedMenu = document.createElement('div');
 
   var watchedMenuLabel = document.createElement('label');
-  watchedMenuLabel.innerHTML = 'Watched threads';
+  watchedMenuLabel.innerHTML = 'Watched Threads';
 
   watchedMenuLabel.onmousedown = function(event) {
     startMovingWatched(event);

@@ -128,9 +128,6 @@
   width: 100%;
   margin-bottom: 0.25em;
 }
-#newPostFieldset, #quick-reply table, .modalDecorationPanel {
-  border: 1px dashed;
-}
 
 #postBox input:focus, #postBox textarea:focus, .modalDecorationPanel 
 #input[type='text']:focus
@@ -155,7 +152,6 @@
 }
 
 .modalDecorationPanel {
-  background: #FFCCCB;
   padding: 10px;
   display: inline-block;
 }

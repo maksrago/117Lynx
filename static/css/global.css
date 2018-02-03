@@ -93,7 +93,7 @@ input[type=button], button, .selectedCell
   color: rgba(0, 0, 0, 0.5);
   font-family: arial, helvetica, sans-serif;;
   font-weight: normal;
-  font-size: 12pt;
+  font-size: 10pt;
 }
 
 input[type=submit] {
@@ -479,4 +479,21 @@ footer {
   //background: #282A2E;
   height: 25em;
   //overflow-y: auto;
+}
+
+.embedButton {
+  color: #81A2BE;
+}
+
+#newPostFieldset, #quick-reply table, .modalDecorationPanel {
+  border: 1px solid #282a2e;
+}
+
+.modalDecorationPanel {
+  background: #1d1f21;
+}
+
+.markedPost {
+  background: #1d1d21;
+  border: 1px solid #000;
 }
