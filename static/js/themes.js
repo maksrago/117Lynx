@@ -67,7 +67,7 @@ if (!DISABLE_JS) {
     themeSelector.id = 'themeSelector';
 
     var vanillaOption = document.createElement('option');
-    vanillaOption.innerHTML = 'Default';
+    vanillaOption.innerHTML = 'Tomorrow';
     themeSelector.appendChild(vanillaOption);
 
     for (i = 0; i < themes.length; i++) {

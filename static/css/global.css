@@ -385,7 +385,7 @@ footer {
 
 .panelBacklinks a {
   font-weight: normal;
-  text-decoration: underline;
+  font-size: 11px;
 }
 
 /*Board header*/
@@ -447,10 +447,7 @@ footer {
   font-size: 18pt;
   font-weight: bold;
   font-family: arial, helvetica, sans-serif;
-}
-
-.quoteLink {
-  text-decoration: underline;
+  padding-bottom: 10px;
 }
 
 #labelName {
@@ -466,4 +463,20 @@ footer {
 .topLinks {
    margin-bottom: -8px;
    padding-inline-start: 12px;
+}
+
+#divMessage {
+   font-weight: bold;
+}
+
+#alwaysUseBypassDiv {
+   margin-right: -27px;
+   margin-left: -2px;
+}
+
+.catalogCell {
+  //border: 1px solid #117743;
+  //background: #282A2E;
+  height: 25em;
+  //overflow-y: auto;
 }

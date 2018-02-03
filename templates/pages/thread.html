@@ -429,32 +429,42 @@
     <hr>
   </div>
 
+<div class = "topLinks">
+[<a href="" onclick="returnToPage()"">Return</a>] [<a href="../catalog.html">Catalog</a>] [<a href="#footer">Bottom</a>] [<a href="#null" id="refreshButton" onclick="refreshPosts(true)" value="Refresh">Update</a>]
+        [<label>
+          <input
+            id="checkboxChangeRefresh"
+            type="checkbox"
+            checked
+            onchange="changeRefresh()">Auto <span id="labelRefresh"></span></label> ]
+
+<div class="divRefresh hidden">
+        <input
+          type="hidden"
+          id="refreshButton"
+          onclick="refreshPosts(true)"
+          value="Refresh">
+      </div>
+</div>
+
+<script>
+function returnToPage() {
+    window.history.back();
+}
+</script>
+
   <div id="threadList">
 
       <div id="divThreads"></div>
 
       <hr class="clearer" />
 
-      <div class="divRefresh hidden">
 
-        <input
-          type="button"
-          id="refreshButton"
-          onclick="refreshPosts(true)"
-          value="Refresh">
+<div class = "bottomLinks">
+[<a href="" onclick="returnToPage()"">Return</a>] [<a href="catalog.html">Catalog</a>] [<a href="#">Top</a>] [<a href="#null" id="refreshButton" onclick="refreshPosts(true)" value="Refresh">Update</a>]
 
-        <label>
-          <input
-            id="checkboxChangeRefresh"
-            type="checkbox"
-            checked
-            onchange="changeRefresh()">
-          Auto <span id="labelRefresh"></span>
-        </label>
-
-      </div>
-
-      <div id=boardContentLinks>
+<hr>
+      <div id=boardContentLinks align="right">
         <span>[</span>
         <a id="linkManagement">Manage Board</a>
         <span>/</span>

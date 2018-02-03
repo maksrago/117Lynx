@@ -38,8 +38,7 @@ function updateHiddenFiles(file, hiding) {
 
     var element = mediaObject[i];
 
-    element.button.innerHTML = hiding ? '(Show file)' : '(Hide file)';
-
+    element.button.innerHTML = hiding ? '(Show File)' : '(Hide File)';
     if (element.element.style.display === 'none' && hiding) {
 
       var hideLinkList = element.element.parentNode
