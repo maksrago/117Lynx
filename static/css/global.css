@@ -497,3 +497,7 @@ footer {
   background: #1d1d21;
   border: 1px solid #000;
 }
+
+.linkName.noEmailName:hover, a:link:hover {
+  color: #81a2be;
+}
