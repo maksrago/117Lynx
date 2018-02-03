@@ -421,7 +421,6 @@ footer {
 }
 
 #postingForm label {
-  font-size: 11pt;
   font-family: arial, helvetica, sans-serif;
 }
 
@@ -498,10 +497,14 @@ footer {
   border: 1px solid #000;
 }
 
-.linkName.noEmailName:hover, a:link:hover {
+.linkName.noEmailName:hover, a:link:hover, .linkQuote:hover, a:hover {
   color: #81a2be;
 }
 
 .bottomPostReply {
   margin-top: -15px;
+}
+
+#boardContentLinks {
+  text-align: right;
 }
