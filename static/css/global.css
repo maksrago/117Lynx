@@ -1,7 +1,8 @@
 .small {
   font-size: 10pt;
   text-decoration: none;
-  font-family: sans-serif;
+  font-family: arial, helvetica, sans-serif;
+;
 }
 
 .clearer {
@@ -26,7 +27,7 @@ h3, p, label {
 
 hr {
   height: 0px;
-  border-width: 2px medium;
+  border-width: 1px medium;
   border-style: solid none none;
   border-color: #282a2e;
 }
@@ -51,7 +52,7 @@ a {
 }
 
 a:hover, .glowOnHover:hover {
-  text-shadow: 0px 0px 5px #117743;
+  text-shadow: 0px 0px 0px #81a2be;
 }
 
 u {
@@ -73,13 +74,14 @@ em {
 input, select, textarea {
    background: #FFFFFF;
    color: #000000;
-   font-family: arial;
+   font-family: arial, helvetica, sans-serif;
+;
 }
 
 input[type=button], button, .selectedCell
   {
   border-radius: 1px;
-  font-family: sans-serif;
+  font-family: arial, helvetica, sans-serif;
   font-size: 100%;
   cursor: pointer; 
 }
@@ -89,14 +91,14 @@ input[type=button], button, .selectedCell
   border: 3px dashed rgba(125, 125, 125, 0.4);
   border-radius: 0px;
   color: rgba(0, 0, 0, 0.5);
-  font-family: sans-serif;
+  font-family: arial, helvetica, sans-serif;;
   font-weight: normal;
   font-size: 12pt;
 }
 
 input[type=submit] {
   padding-left: 0.25em;
-  font-family: arial, sans-serif;
+  font-family: arial, helvetica, sans-serif;;
   font-size: 80%;
   font-weight: bold;
   margin-top: 0.5em;
@@ -114,7 +116,7 @@ input[type=submit] {
 
 /* import resources here; external CSS, fonts, etc */
 @font-face {
-  font-family: 'Hack';
+  font-family: arial, helvetica, sans-serif;
   src: url('../hack-regular-webfont.eot?v=2.018');
   src: url('../hack-regular-webfont.eot?#iefix&v=2.018')
     format('embedded-opentype'),
@@ -139,10 +141,10 @@ input[type=submit] {
 
 /* body styles, inherited by whole page */
 body {
-  color: #ACACAC;
-  background: #1D1F21;
-  font-family: sans-serif;
-  font-size: 100%;
+  color: #c5c8c6;
+  background: #1d1f21;
+  font-family: arial, helvetica, sans-serif;;
+  font-size: 10pt;
   margin: 0px;
 }
 
@@ -258,7 +260,7 @@ span.spoiler {
 }
 
 .spoiler:hover {
-  color: #ACACAC;
+  color: #c5c8c6;
   background: none;
 }
 
@@ -274,7 +276,7 @@ span.spoiler {
 }
 
 #settingsFieldset {
-  border: 2px solid #282a2e;
+  border: 1px solid #282a2e;
   padding: 1em;
   display: inline-block;
   text-align: left;
@@ -337,16 +339,17 @@ input.wide, textarea.wide {
 #staticPageFieldset {
   display: inline-block;
   padding: 0.5em 1em;
-  border: 2px solid #282a2e;
+  border: 1px solid #282a2e;
   text-align: left;
 }
 
 /* footer styles */
 footer {
   width: 100%;
-  margin: 3em 0px 2em 0px;
+  margin: 0em 0px 2em 0px;
   text-align: center;
-  font-size: 75%;
+  font-size: 8pt;
+  font-family: arial, helvetica, sans-serif;;
 }
 
 /* this has to go down here to override anything above it */
@@ -359,7 +362,7 @@ footer {
 }
 
 .floatingMenu {
-  border: 2px solid #282a2e;
+  border: 1px solid #282a2e;
   background: #1d1f21;
   padding: 0.25em;
 }
@@ -388,7 +391,7 @@ footer {
 /*Board header*/
 .boardHeader p {
   color: #c5c8c6;
-  font-weight: bold;
+  font-weight: none;
 }
 
 #postingForm td {
@@ -405,7 +408,7 @@ footer {
   background: #282a2e;
   font-weight: bold;
   text-align: left;
-  font-family: Arial;
+  font-family: arial, helvetica, sans-serif;
   width: 85px;
   padding-left: 5px;
   border: 1px solid #000;
@@ -419,7 +422,7 @@ footer {
 
 #postingForm label {
   font-size: 11pt;
-  font-family: sans-serif;
+  font-family: arial, helvetica, sans-serif;
 }
 
 .flagPreview {
@@ -427,7 +430,7 @@ footer {
 }
 
 .reportFieldset {
-  border-width: 2px medium;
+  border-width: 1px medium;
   border-color: #282a2e;
 }
 
@@ -442,5 +445,25 @@ footer {
 
 #newThreadText {
   font-size: 18pt;
-  font-weight: none;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif;
+}
+
+.quoteLink {
+  text-decoration: underline;
+}
+
+#labelName {
+  font-family: 'Tahoma', sans-serif;
+  font-weight: bold;
+  font-size: 28pt;
+}
+
+.noEmailName {
+  color: #c5c8c6;
+}
+
+.topLinks {
+   margin-bottom: -8px;
+   padding-inline-start: 12px;
 }

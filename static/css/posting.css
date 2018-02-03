@@ -39,7 +39,7 @@
 
 .postInfo, .opHead, .divMessage, .panelUploads, .panelIp, .panelProxyIp,
   .contentOmissionIndicator, .labelOmission, .labelId {
-  font-size: 80%;
+  font-size: 100%;
 }
 
 .divPosts {
