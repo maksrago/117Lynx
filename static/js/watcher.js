@@ -1,5 +1,4 @@
 var watchedMenu;
-
 var isInThread = document.getElementById('threadIdentifier') ? true : false;
 var watcherAlertCounter = 0;
 var elementRelation = {};
