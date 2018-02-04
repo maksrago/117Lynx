@@ -30,19 +30,19 @@
   type="text/css"
   rel="stylesheet" />
 </head>
-<body>
+<body style="padding-bottom: 250px;">
 
   <nav>
     <span id="navLinkSpan"> <span>[</span> <a
         href="/"
         class="coloredIcon"
-        id="navLinkHome">home</a> <span>/</span> <a
+        id="navLinkHome">Home</a> <span>/</span> <a
         href="/boards.js"
         class="coloredIcon"
-        id="navBoardList">boards</a> <span>/</span> <a
+        id="navBoardList">Boards</a> <span>/</span> <a
         href="/.static/posting.html"
         class="coloredIcon"
-        id="navPosting">help</a> <span>]</span>
+        id="navPosting">Help</a> <span>]</span>
     </span> <span id="navBoardsSpan"> </span> <span id="navOptionsSpan"> </span>
   </nav>
 
@@ -52,6 +52,13 @@
       src="/randomBanner.js" />
   </header>
 
+<hr>
+<div id="topLinksOverboard">
+[<a href="/">Return</a>] [<a href="#footer">Bottom</a>] [<a href="/overboard/">Refresh</a>]
+</div>
+
+
+<div class="overboardBody" display="inline">
   <div id="threadList">
 
     <form
@@ -62,116 +69,23 @@
       <div id="divThreads"></div>
 
     </form>
-
-    <fieldset class="reportFieldset">
-      <legend>Delete</legend>
-
-      <div class="contentAction">
-        <label>
-          Password
-          <input
-            type="text"
-            id="deletionFieldPassword"
-            name="password">
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            id="checkboxOnlyFiles"
-            name="deleteUploads">
-          Delete only files (Removes the file reference to the posts)
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            id="checkboxMediaDeletion"
-            name="deleteMedia">
-          Delete media (Removes the saved files from the server)
-        </label>
-        <input
-          type="submit"
-          id="deleteFormButton"
-          value="Delete"
-          name="action">
-
-        <input
-          type="button"
-          class="hidden"
-          id="deleteJsButton"
-          onClick="deletePosts()"
-          value="Delete">
-      </div>
-    </fieldset>
-
-    <fieldset class="reportFieldset">
-      <legend>Report</legend>
-
-      <div class="contentAction">
-
-        <label>
-          Reason
-          <input
-            type="text"
-            id="reportFieldReason"
-            name="reason">
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            id="checkboxGlobal"
-            name="global">
-          Global
-        </label>
-        <img
-          class="captchaImage"
-          id="captchaImageReport"
-          src="/captcha.js">
-
-        <input
-          type="button"
-          class="hidden"
-          id="reloadCaptchaButtonReport"
-          onclick="reloadCaptcha()"
-          value="Reload">
-        <span class="captchaTimer"></span>
-        <br>
-
-
-        <input
-          name="captcha"
-          type="text"
-          class="captchaField"
-          id="fieldCaptchaReport"
-          placeholder="answer">
-
-        <a
-          href="/noCookieCaptcha.js"
-          class="small">no cookies?</a>
-        <br>
-
-        <input
-          type="submit"
-          id="reportFormButton"
-          value="Report"
-          name="action">
-
-        <input
-          type="button"
-          class="hidden"
-          id="reportJsButton"
-          onClick="reportPosts()"
-          value="Report">
-
-
-      </div>
-
-    </fieldset>
-
   </div>
+</div>
 
-  <footer id="footer"></footer>
 
 </body>
+
+<div class = "footerOverboard">
+<div id="bottomLinksOverboard">
+<hr>
+[<a href="/">Return</a>] [<a href="#">Top</a>] [<a href="/overboard/">Refresh</a>]
+</div>
+<hr>
+<footer id="footer">All trademarks and copyrights on this page are owned by their respective parties. Images uploaded are the responsibility of the Poster. Comments are owned by the Poster.
+<br />
+<div class = "footerBar"><a href="/.static/about.html">About</a> • <a href="/meta/">Feedback</a> • <a href="/.static/legal.html">Legal</a> • <a href="/.static/contact.html">Contact</a></div>
+</footer>
+</div>
 
 <script src="/.static/js/settings.js"></script>
 <script src="/.static/js/api.js"></script>
@@ -184,6 +98,7 @@
 <script src="/.static/js/settingsMenu.js"></script>
 <script src="/.static/js/hiding.js"></script>
 <script src="/.static/js/mediaHiding.js"></script>
+<script src="/.static/js/draggable.js"></script>
 <script src="/.static/js/watcher.js"></script>
 <script src="/.static/js/embed.js"></script>
 <script src="/.static/js/board.js"></script>

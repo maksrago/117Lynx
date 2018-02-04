@@ -454,11 +454,11 @@ footer {
   color: #c5c8c6;
 }
 
-.topLinks {
+.topLinks, #topLinksOverboard {
    margin-bottom: -8px;
 }
 
-.topLinks, #bottomLinksCatalog {
+.topLinks, #bottomLinksCatalog, #topLinksOverboard, #bottomLinksOverboard {
    padding-inline-start: 12px;
 }
 
@@ -543,4 +543,8 @@ footer {
 
 .tempRefreshLynx {
   display: none;
+}
+
+.footerOverboard {
+   padding-top: 200px;
 }
