@@ -1,16 +1,3 @@
-body {
-  background-color: #cccccc;
-  color: #000000
-}
-
-nav {
-  background-color: #acacac
-}
-
-a, .hideButton {
-  color: #000000
-}
-
-.innerPost {
-  background-color: #dddddddd
+img {
+    display:none;
 }
