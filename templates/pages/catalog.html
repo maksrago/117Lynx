@@ -50,7 +50,18 @@
         href="/.static/posting.html"
         class="coloredIcon"
         id="navPosting">Help</a> <span>]</span>
-    </span> <span id="navBoardsSpan"> </span> <span id="navOptionsSpan"> </span>
+    </span> <span id="navBoardsSpan"> </span> <span id="navOptionsSpan"> <span>[</span>
+      <a
+        href="#"
+        class="coloredIcon"
+        id="linkTop"></a> <span>/</span> <a
+        href="#footer"
+        class="coloredIcon"
+        id="linkBottom"></a> <span>/</span> <a
+        href="index.rss"
+        class="coloredIcon"
+        id="linkRss">RSS</a> <span>]</span>
+    </span>
   </nav>
 
   <p id="catalogId">
@@ -60,211 +71,220 @@
       id="labelBoard"></a>
   </p>
 
-<div id="wholePostingForm">
-  <div id="postingForm">
-    <button
-      id="togglePosting"
-      class="hidden">Post thread</button>
-    <fieldset id="newPostFieldset">
-      <legend>Mode: Thread</legend>
+<center><div id="wholePostingForm">
+  <div class="postingForm">
 
-      <form
-        class="form-post"
-        action="/newThread.js"
-        enctype="multipart/form-data"
-        method="post">
+    <form
+      class="form-post"
+      action="/newThread.js"
+      enctype="multipart/form-data"
+      method="post">
 
-        <div id="postBox">
+      <table id="postingForm">
+        <tbody>
+          <tr id="divName">
+            <th>Name</th>
+            <td>
+              <input
+                type="text"
+                size="25"
+                id="fieldName"
+                name="name">
+            </td>
+          </tr>
+          <tr>
+            <th>E-mail</th>
+            <td>
+              <input
+                size="25"
+                type="text"
+                id="fieldEmail"
+                name="email">
+            </td>
+          </tr>
+          <tr>
+            <th>Subject</th>
+            <td>
+              <input
+                type="text"
+                size="25"
+                id="fieldSubject"
+                name="subject">
 
-          <div
-            id="divName"
-            class="wider">
-            <input
-              type="text"
-              id="fieldName"
-              name="name"
-              placeholder="Name">
-          </div>
+              <button
+                type="submit"
+                id="formButton">Post</button>
 
-          <div class="wider">
-            <input
-              type="text"
-              id="fieldEmail"
-              name="email"
-              placeholder="E-mail">
-          </div>
+              <button
+                type="button"
+                onClick="postThread()"
+                id="jsButton"
+                class="hidden">Post</button>
+            </td>
+          </tr>
+          <tr>
+            <th>Message*</th>
+            <td>
+              <textarea
+                rows="5"
+                cols="35"
+                id="fieldMessage"
+                name="message"></textarea>
+              <input
+                type="hidden"
+                name="boardUri"
+                id="boardIdentifier">
 
-          <div class="wider">
-            <input
-              type="text"
-              id="fieldSubject"
-              name="subject"
-              placeholder="Subject">
-          </div>
-
-          <div>
-            <textarea
-              id="fieldMessage"
-              name="message"
-              placeholder="Message"></textarea>
-          </div>
-
-          <div class="wider">
-
-            <input
-              type="text"
-              name="password"
-              id="fieldPostingPassword"
-              placeholder="Password">
-          </div>
-
-          <div
-            id="noFlagDiv"
-            class="centered">
-            <input
-              type="checkbox"
-              class="postingCheckbox"
-              id="checkboxNoFlag"
-              name="noFlag">
-            <label for="checkboxNoFlag">Don't show location</label>
-          </div>
-
-          <div
-            id="alwaysUseBypassDiv"
-            class="centered hidden">
-            <input
-              type="checkbox"
-              class="postingCheckbox"
-              id="alwaysUseBypassCheckBox">
-            <label for="alwaysUseBypassCheckBox">Make sure I have a
-              block bypass</label>
-          </div>
-
-          <div id="flagsDiv">
-            <select
-              name="flag"
-              id="flagCombobox">
-            </select>
-            <img class="flagPreview">
-          </div>
-
-          <div id="divUpload">
-            <div
-              class="hidden"
-              id="dragAndDropDiv">
-              <div
-                class="dropzone"
-                id="dropzone">
-                Drag files to upload or
-                <br>
-                click here to select them
+              <p class="small">
+                Remember to follow the
+                <a
+                  href="rules.html"
+                  class="rules">rules</a>
+              </p>
+              <p class="small">
+                Max message length: <span id="labelMessageLength"></span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Password</th>
+            <td>
+              <input
+                size="12"
+                type="password"
+                id="fieldPostingPassword"
+                name="password"
+                type="password">
+              <span class="small">(Used to delete files and postings)</span>
+              <div id="noFlagDiv">
+                <input
+                  type="checkbox"
+                  id="checkboxNoFlag"
+                  name="noFlag">
+                <label for="checkboxSpoiler">Don't show location</label>
               </div>
-              <div id="selectedDiv"></div>
-            </div>
+            </td>
+          </tr>
 
-            <div>
-              <input
-                type="file"
-                name="files"
-                id="files"
-                multiple
-                class="fileBrowser">
-            </div>
 
-            <div>
-              <input
+          <tr
+            id="alwaysUseBypassDiv"
+            class="hidden">
+            <th>Bypass Check</th>
+            <td><input
+                id="alwaysUseBypassCheckBox"
                 type="checkbox"
-                name="spoiler"
-                class="postingCheckbox"
-                id="checkboxSpoiler">
+                id="fieldPostingPassword"></td>
+          </tr>
 
-              <label for="checkboxSpoiler">Spoiler</label>
-            </div>
 
-            <p class="small">
-              Max file size: <span id="labelMaxFileSize"></span>
-            </p>
-            <p class="small">
-              Max files: <span id="labelMaxFiles"></span>
-            </p>
-          </div>
+          <tr id="flagsDiv">
+            <th>Flag</th>
+            <td>
+              <select
+                name="flag"
+                id="flagCombobox"></select><img class="flagPreview">
+            </td>
+          </tr>
 
-        </div>
+          <tr id="divUpload">
+            <th>Files</th>
 
-        <div id="captchaDiv">
+            <td>
 
-          <img
-            class="captchaImage"
-            src="/captcha.js"
-            id="captchaImage" />
+              <div
+                class="hidden"
+                id="dragAndDropDiv">
+                <div
+                  class="dropzone"
+                  id="dropzone">
+                  Drag files to upload or
+                  <br>
+                  click here to select them
+                </div>
+                <div id="selectedDiv"></div>
+              </div>
 
-          <div class="subCaptchaDiv">
-            <input
-              type="button"
-              onClick="reloadCaptcha()"
-              value="Reload"
-              id="reloadCaptchaButton"
-              class="hidden">
-            <span class="captchaTimer"></span>
-            <br>
+              <div>
+                <input
+                  type="file"
+                  name="files"
+                  id="files"
+                  multiple
+                  class="fileBrowser">
+              </div>
 
-            <input
-              name="captcha"
-              type="text"
-              class="captchaField"
-              id="fieldCaptcha"
-              placeholder="answer">
+              <div>
+                <input
+                  type="checkbox"
+                  name="spoiler"
+                  id="checkboxSpoiler">
 
-            <a
-              href="/noCookieCaptcha.js"
-              class="small">no cookies?</a>
+                <label for="checkboxSpoiler">Spoiler</label>
+              </div>
 
-          </div>
+              <p class="small">
+                Max file size: <span id="labelMaxFileSize"></span>
+              </p>
+              <p class="small">
+                Max files: <span id="labelMaxFiles"></span>
+              </p>
 
-        </div>
 
-        <button
-          type="submit"
-          id="formButton">Post</button>
+            </td>
 
-        <button
-          type="button"
-          onClick="postThread()"
-          id="jsButton"
-          class="hidden">Post</button>
+          </tr>
 
-        <input
-          type="hidden"
-          name="boardUri"
-          id="boardIdentifier">
+          <tr id="captchaDiv">
+            <th>Captcha</th>
 
-        <p class="small">
-          Remember to follow the
-          <a
-            href="rules.html"
-            class="rules">rules</a>
-        </p>
-        <p class="small">
-          Max message length: <span id="labelMessageLength"></span>
-        </p>
+            <td>
+              <img
+                class="captchaImage"
+                src="/captcha.js"
+                id="captchaImage" />
 
-      </form>
+              <div class="subCaptchaDiv">
+                <input
+                  type="button"
+                  onClick="reloadCaptcha()"
+                  value="Reload"
+                  id="reloadCaptchaButton"
+                  class="hidden">
+                <span class="captchaTimer"></span>
 
-    </fieldset>
+                <input
+                  name="captcha"
+                  type="text"
+                  class="captchaField"
+                  id="fieldCaptcha"
+                  placeholder="Answer">
 
-  </div>
-</div>
+                <a
+                  href="/noCookieCaptcha.js"
+                  class="small">No cookies?</a>
 
+              </div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </form>
+
+  </div></center>
+
+<hr>
+
+<hr>
+<div id="topLinksCatalog">
   <div
     id="divTools"
     class="hidden">
+[<a href="./">Return</a>] [<a href="#footer">Bottom</a>] [<a href="./catalog.html">Refresh</a>]&nbsp;
 
-    <span class="catalogLabel">Search :</span>
-    <input
-      type="text"
-      id="catalogSearchField">
-
-
+<div class="tempRefreshLynx">
     (
     <button
       id="catalogRefreshButton"
@@ -277,12 +297,24 @@
     <span
       class="catalogLabel"
       id="catalogRefreshLabel">Auto</span>)
+</div>
+
+    <span class="catalogLabel" align="right">Search :</span>
+    <input
+      type="text"
+      id="catalogSearchField">
 
   </div>
-
+</div>
+<hr>
   <div
     id="divThreads"
     class="catalogDiv"></div>
+<hr>
+<div id="bottomLinksCatalog">
+[<a href="./">Return</a>] [<a href="#">Top</a>] [<a href="./catalog.html">Refresh</a>]
+</div>
+<hr>
 
 <footer id="footer">All trademarks and copyrights on this page are owned by their respective parties. Images uploaded are the responsibility of the Poster. Comments are owned by the Poster.
 <br />
@@ -297,8 +329,7 @@
 <script src="/.static/js/board.js"></script>
 <script src="/.static/js/postCommon.js"></script>
 <script src="/.static/js/captchaModal.js"></script>
-<script src="/.st<div class = "footerBar"><a href="/.static/about.html">About</a> • <a href="/meta/">Feedback</a> • <a href="/.static/legal.html">Legal</a> • <a href="/.static/contact.html">Contact</a></div>
-</footer>atic/js/captcha.js"></script>
+<script src="/.static/js/thumbs.js"></script>
 <script src="/.static/js/catalog.js"></script>
 <script src="/.static/js/themes.js"></script>
 <script src="/.static/js/draggable.js"></script>

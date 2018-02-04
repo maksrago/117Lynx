@@ -456,6 +456,9 @@ footer {
 
 .topLinks {
    margin-bottom: -8px;
+}
+
+.topLinks, #bottomLinksCatalog {
    padding-inline-start: 12px;
 }
 
@@ -536,4 +539,8 @@ footer {
 
 .linkSelf, .linkQuote {
   color: #c5c8c6
+}
+
+.tempRefreshLynx {
+  display: none;
 }
