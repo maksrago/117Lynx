@@ -266,18 +266,16 @@
                 <a
                   href="/noCookieCaptcha.js"
                   class="small">No cookies?</a>
-
               </div>
             </td>
           </tr>
-
         </tbody>
       </table>
-
     </form>
-
   </div>
+<div id="hidePostWrapperMini" align="center">[<a href="#" onclick="displayFunctionTwo()">Hide</a>]</div>
 </div>
+
 <script>
 function displayFunction() {
     var x = document.getElementById("showPostWrapper");
@@ -286,6 +284,16 @@ function displayFunction() {
     y.style.display = "none";
 }
 </script> 
+
+<script>
+function displayFunctionTwo() {
+    var x = document.getElementById("showPostWrapper");
+    var y = document.getElementById("newThreadText");
+    x.style.display = "none";
+    y.style.display = "block";
+}
+</script> 
+
   <div id="panelMessage">
     <hr>
     <div id="divMessage"></div>
