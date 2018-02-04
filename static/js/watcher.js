@@ -19,7 +19,7 @@ if (!DISABLE_JS) {
       referenceNode);
 
   var watcherButton = document.createElement('a');
-  watcherButton.innerHTML = 'watched threads';
+  watcherButton.innerHTML = 'Watched Threads';
   watcherButton.id = 'watcherButton';
   watcherButton.className = 'coloredIcon';
 
@@ -32,7 +32,7 @@ if (!DISABLE_JS) {
   watchedMenu = document.createElement('div');
 
   var watchedMenuLabel = document.createElement('label');
-  watchedMenuLabel.innerHTML = 'Watched threads';
+  watchedMenuLabel.innerHTML = 'Watched Threads';
 
   watchedMenu.appendChild(watchedMenuLabel);
 
