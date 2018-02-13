@@ -46,6 +46,10 @@ hr {
   margin-right: 0.25em;
 }
 
+.links {
+  margin-bottm: -25px;
+}
+
 a {
   color: #81a2be;
   text-decoration: none;
@@ -167,6 +171,8 @@ nav {
   z-index: 1;
   padding-top; 2px;
   border-bottom: 1px solid #000;
+  min-height: 20px;
+  max-height: 20px;
 }
 
 nav span, nav a {
@@ -582,4 +588,24 @@ div.tableOutside p {
 .boardBox {
   display: inline-block;
   vertical-align: top;
+}
+
+.inner_h2 {
+  margin: 0;
+  padding: 3px 5px;
+  font-size: 11pt;
+  font-weight: bold;
+  font-weight: underline;
+}
+
+.unusedStats {
+  display: none;
+}
+
+#statBox {
+  text-align: center;
+  display: inline-block;
+  width: 230px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
