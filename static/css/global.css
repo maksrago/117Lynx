@@ -548,3 +548,33 @@ footer {
 .footerOverboard {
    padding-top: 200px;
 }
+
+.tableOutside {
+  margin-top: 10px;
+  width: 700px;
+  max-width: 700px;
+  text-align: left;
+  border: 1px solid #000;
+  overflow-wrap: break-word;
+  margin-bottom: 20px;
+}
+
+.table_h2 {
+  margin: 0;
+  padding: 3px 5px;
+  font-size: 11pt;
+  font-weight: bold;
+  background-color: #282A2E;
+}
+
+div.tableOutside p {
+  padding: 0px 10px;
+  overflow-wrap: break-word;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.nonBoardSubText {
+  padding-bottom: 25px;
+  margin-top: -15px;
+}
