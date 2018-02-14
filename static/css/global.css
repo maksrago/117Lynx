@@ -79,7 +79,10 @@ input, select, textarea {
    background: #FFFFFF;
    color: #000000;
    font-family: arial, helvetica, sans-serif;
-;
+}
+
+textarea {
+  font-size: 10pt;
 }
 
 input[type=button], button, .selectedCell, #searchButton
@@ -353,7 +356,7 @@ input.wide, textarea.wide {
 /* footer styles */
 footer {
   width: 100%;
-  margin: 0em 0px 2em 0px;
+  margin: 2em 0px 2em 0px;
   text-align: center;
   font-size: 8pt;
   font-family: arial, helvetica, sans-serif;;
@@ -562,7 +565,6 @@ footer {
   text-align: left;
   border: 1px solid #000;
   overflow-wrap: break-word;
-  margin-bottom: 20px;
 }
 
 .table_h2 {
@@ -608,4 +610,42 @@ div.tableOutside p {
   width: 230px;
   padding-top: 9px;
   padding-bottom: 9px;
+}
+
+#links {
+  margin-top: -20px;
+  display: none;
+}
+
+.linkBoxes {
+  padding-top: 10px;
+}
+
+.linkBoxes li.first {
+  border-left: 1px solid #000;
+}
+
+.linkBoxes li {
+  display: block;
+  float: left;
+  border: 1px solid #000;
+  border-left: none;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 2px;
+  margin-top: -1px;
+  padding-top: 2px;
+  list-style: none;
+  background: #282A2E;
+}
+
+.linkBoxes ul {
+  display: table;
+  margin: auto;
+  width: 500px;
+  padding: 0;
+}
+
+.linkBoxes a {
+  color: #c5c8c6;
 }
