@@ -276,36 +276,16 @@
 <div id="hidePostWrapperMini" align="center">[<a href="#" onclick="displayFunctionTwo()">Hide</a>]</div>
 </div>
 
-<script>
-function displayFunction() {
-    var x = document.getElementById("showPostWrapper");
-    var y = document.getElementById("newThreadText");
-    x.style.display = "block";
-    y.style.display = "none";
-}
-</script> 
-
-<script>
-function displayFunctionTwo() {
-    var x = document.getElementById("showPostWrapper");
-    var y = document.getElementById("newThreadText");
-    x.style.display = "none";
-    y.style.display = "block";
-}
-</script> 
-
-
-
-
-  <div id="panelMessage">
-    <hr>
+<hr>
 <div class = "bAnnounce">
 <p id="globalAnnouncement"></p>
 </div>
+
+  <div id="panelMessage">
     <hr>
     <div id="divMessage"></div>
-    <hr>
 </div>
+    <hr>
 <div class = "topLinks">
 [<a href="/">Home</a>] [<a href="catalog.html">Catalog</a>]
   </div>
@@ -435,16 +415,7 @@ function displayFunctionTwo() {
      </div>
     </form>
   </div>
-<script>
-function toggleBoxes() {
-    var x = document.getElementById("hiddenboxes");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
-</script> 
+ 
 <footer id="footer">All trademarks and copyrights on this page are owned by their respective parties. Images uploaded are the responsibility of the Poster. Comments are owned by the Poster.
 <br />
 <div class = "footerBar"><a href="/.static/faq.html#faq1">About</a> • <a href="/meta/res/1.html#">Feedback</a> • <a href="/.static/contact.html#legal">Legal</a> • <a href="/.static/contact.html">Contact</a></div>
@@ -471,5 +442,6 @@ function toggleBoxes() {
 <script src="/.static/js/postingMenu.js"></script>
 <script src="/.static/js/favouriteBoards.js"></script>
 <script src="/.static/js/globalAnnouncement.js"></script>
+<script src="/.static/js/hideThread.js"></script>
 
 </html>

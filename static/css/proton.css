@@ -2,7 +2,8 @@
 /* by deysu */
 /* mewch.net */
 body {
-  background: #EEEEEE;  
+  background: #EEEEEE;
+  color: #000;  
 }
 .innerPost {  /* normal reply */
   background-color: #DDDDDD;
@@ -15,26 +16,21 @@ body {
 .markedPost { /* highlighted reply */
   background-color: #CCC;
   box-shadow: none;
-  border: 1px solid #BA9DBF;
-  border-left: none;
-  border-top: 1px solid #CCC;
-  border-radius: 3px;
+  border: 1px solid #CCC;
 }
 a {
-    color: #FF6600 !important;
+    color: #FF6600;
 }
 a:hover, #watcherButton:hover {
     color:#FF3300!important;
+  text-decoration: underline;
 }
-#labelName { /* Board Title */
-    color: #004794;
-    font-family: Tahoma, san-serif !important;
-}
-#labelDescription { /* Board description */
-    color: #333;
-    font-family: Tahoma, san-serif !important;
 
+#labelName, #labelDescription { /* Board Title */
+    color: #004794;
+    font-family: arial, helvetica, sans-serif;
 }
+
 .linkName, .linkName:hover {
     color: #004794 !important;
 }
@@ -58,7 +54,7 @@ nav { /* Top navigation bar */
     background-color: #EEEEEE;
 }
 #postingForm th {
-    background-color: #DDDDDD;
+    background-color: #DDD;
     font-weight: bold;
     font-size: 12px;
     border: 1px solid #CCC;
@@ -66,4 +62,45 @@ nav { /* Top navigation bar */
 #divLatestPosts .latestPostCell {
     background: #DDDDDD;
     border: 1px solid #DDDDDD;
+}
+
+hr {
+  border-color: #DDD;
+}
+
+.labelSubject, .noEmailName {
+  color: #111;
+}
+
+.coloredIcon {
+  color: #FF6600;
+}
+
+.table_h2, .linkBoxes li {
+  background-color: #DDD;
+}
+
+.tableOutside, .linkBoxes li {
+  border: 1px solid #CCC;
+}
+
+.linkBoxes li {
+  border: 1px solid #CCC;
+  border-left: none;
+}
+
+.linkBoxes li.first {
+  border-left: 1px solid #CCC;
+}
+
+.linkBoxes a {
+  color: #000;
+}
+
+.reportFieldset {
+  border: 1px solid #DDD;
+}
+
+span.spoiler:hover {
+  color: #000;
 }

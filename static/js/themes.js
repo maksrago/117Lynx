@@ -11,6 +11,10 @@ var themes = [ {
   label : 'Proton',
   id : 'proton'
 }, {
+  file : 'happyday.css',
+  label : 'Happy Day',
+  id : 'happyday'
+}, {
   file : 'sfw.css',
   label : 'Safe For Work',
   id : 'safeforwork'

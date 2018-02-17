@@ -3,9 +3,16 @@ body {
     color: #000000;
     font-family: arial, helvetica, sans-serif;
 }
-a:hover {
-    color: red;
+
+a, .coloredIcon {
+  color: #34345C
 }
+
+a:hover, #watcherButton:hover {
+    color:#FF3300!important;
+  text-decoration: underline;
+}
+
 .innerPost {
     background-color: #CED1E7;
     border: 1px solid #B7C5D9;
@@ -45,4 +52,42 @@ nav {
     border: 1px solid #000;
 }
 
+.linkName.noEmailName {
+  color: #117743;
+}
 
+.labelSubject {
+  color: #0F0C5D;
+}
+
+.linkSelf, .linkQuote, .linkBoxes a {
+  color: #000000;
+}
+
+hr {
+  border-color: #B7C5D9;
+}
+
+#labelName, #labelDescription {
+  color: #AF0A0F;
+} 
+
+.table_h2 {
+  background-color: #98E;
+}
+
+.linkBoxes li {
+  background: #C1B7F4;
+}
+
+.modalDecorationPanel {
+  background: #CED1E7;
+}
+
+.reportFieldset {
+  border: 1px solid #B7C5D9;
+}
+
+span.spoiler:hover {
+  color: #000;
+}
