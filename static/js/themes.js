@@ -57,14 +57,14 @@ if (!DISABLE_JS) {
 
     var referenceNode = postingLink.nextSibling;
 
-    postingLink.parentNode.insertBefore(document.createTextNode(' '),
+    postingLink.parentNode.insertBefore(document.createTextNode(''),
         referenceNode);
 
     var divider = document.createElement('span');
-    divider.innerHTML = '/';
+    divider.innerHTML = '/&nbsp;';
     postingLink.parentNode.insertBefore(divider, referenceNode);
 
-    postingLink.parentNode.insertBefore(document.createTextNode(' '),
+    postingLink.parentNode.insertBefore(document.createTextNode(''),
         referenceNode);
 
     var themeSelector = document.createElement('select');

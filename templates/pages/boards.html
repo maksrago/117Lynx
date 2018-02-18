@@ -13,6 +13,7 @@
   href="/.static/css/boards.css"
   type="text/css"
   rel="stylesheet" />
+
 </head>
 <body>
 
@@ -24,13 +25,13 @@
         href="/boards.js"
         class="coloredIcon"
         id="navBoardList">Boards</a> <span>/</span> <a
+        href="/.static/globalRules.html"
         class="coloredIcon"
-        id="linkOverboard">Overboard</a> <span>/</span> <a id="linkSfwOver">Overboard
-        SFW</a> <span>/</span> <a
-        href="/.static/faq.html"
+        id="navRules">Rules</a> <span>]</span> <span>[</span> <a
         class="coloredIcon"
-        id="navPosting">FAQ</a> <span>]</span>
-    </span> <span id="navBoardsSpan"> </span> <span id="navOptionsSpan"> </span>
+        id="linkOverboard">All</a> <span>/</span> 
+        <a id="linkSfwOver">All SFW</a><span><div id="navPosting" style="display:none"></div>]</span>
+    </span><div id="navBoardsSpan"></div><span id="navOptionsSpan"> </span>
   </nav>
 
   <header>
@@ -106,7 +107,6 @@
     </div>
 
   </div>
-<hr>
 
 <div class="footerBar" id="footerBarType" value="A"></div>
 
@@ -114,6 +114,8 @@
 
 <script src="/.static/js/settings.js"></script>
 <script src="/.static/js/themes.js"></script>
+<script src="/.static/js/draggable.js"></script>
+<script src="/.static/js/watcher.js"></script>
 <script src="/.static/js/favouriteBoards.js"></script>
 <script src="/.static/js/footerInject.js"></script>
 

@@ -18,7 +18,7 @@
 }
 
 #themeSelector {
-  //font-size: 100%;
+  height: 20px;
 }
 
 h3, p, label {
@@ -103,6 +103,7 @@ input[type=button], button, .selectedCell, #searchButton
   font-family: arial, helvetica, sans-serif;;
   font-weight: normal;
   font-size: 10pt;
+  width: 300px;
 }
 
 input[type=submit] {
@@ -194,27 +195,29 @@ nav span, nav a {
 }
 
 #navLinkHome:before {
-  content: "\e082";
 }
 
 #navBoardList:before {
-  content: "\e03a";
 }
 
 #linkOverboard:before, #navOverboard:before {
-  content: "\e007";
 }
 
 #settingsButton:before {
-  content: "\e041";
 }
 
 #navPosting:before {
-  content: "\e09a";
 }
 
 #navCatalog:before {
   content: "\e072";
+}
+
+#watcherButton::before {
+}
+
+.watchButton::before {
+  content: '\e065';
 }
 
 #linkRss:before {
@@ -681,4 +684,8 @@ div.tableOutside p {
 #divTools {
   margin-bottom: -4px;
   margin-top: -3px;
+}
+
+#watcherButton {
+  margin-left: -5px;
 }

@@ -12,7 +12,7 @@ if (!DISABLE_JS) {
       referenceNode);
 
   var divider = document.createElement('span');
-  divider.innerHTML = '/';
+  divider.innerHTML = '/&nbsp;&nbsp;';
   postingLink.parentNode.insertBefore(divider, referenceNode);
 
   postingLink.parentNode.insertBefore(document.createTextNode(' '),

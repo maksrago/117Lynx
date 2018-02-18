@@ -32,7 +32,7 @@
 </head>
 <body>
 
-  <nav>
+<nav>
     <span id="navLinkSpan"> <span>[</span> <a
         href="/"
         class="coloredIcon"
@@ -40,12 +40,15 @@
         href="/boards.js"
         class="coloredIcon"
         id="navBoardList">Boards</a> <span>/</span> <a
-        href="/overboard"
+        href="/.static/globalRules.html"
         class="coloredIcon"
-        id="navOverboard">Overboard</a> <span>/</span> <a
-        href="/.static/faq.html"
+        id="navOverboard">Rules</a> <span>]</span> <span>[</span> <a
+        href="/overboard/"
         class="coloredIcon"
-        id="navPosting">FAQ</a> <span>]</span>
+        id="navOverboard">All</a> <span>/</span> <a
+        href="/overboardsfw/"
+        class="coloredIcon"
+        id="navPosting">All SFW</a> <span>]</span>
     </span> <span id="navBoardsSpan"> </span> <span id="navOptionsSpan"> <span>[</span>
       <a
         href=".."
@@ -128,7 +131,8 @@
                 rows="5"
                 cols="35"
                 id="fieldMessage"
-                name="message"></textarea>
+                name="message"
+	       style="width: 300px; height: 75px;"></textarea>
               <input
                 type="hidden"
                 name="boardUri"
