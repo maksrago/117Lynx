@@ -5,7 +5,6 @@
 
 #catalogId {
   text-align: center;
-  margin: 1.5em 0 1em 0;
 }
 
 .catalogCell {
@@ -44,4 +43,8 @@
 
 .threadStats {
   font-size: 75%;
+}
+
+.boardHeader #favouriteButton {
+  font-size: 83%;
 }

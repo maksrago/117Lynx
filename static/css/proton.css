@@ -26,7 +26,7 @@ a:hover, #watcherButton:hover {
   text-decoration: underline;
 }
 
-#labelName, #labelDescription { /* Board Title */
+#labelName, #labelDescription, catalogText { /* Board Title */
     color: #004794;
     font-family: arial, helvetica, sans-serif;
 }

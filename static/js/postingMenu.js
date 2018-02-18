@@ -23,7 +23,7 @@ function showReport(board, thread, post, global) {
 
   var reasonField = document.createElement('input');
   reasonField.type = 'text';
-  reasonField.setAttribute('placeholder', 'reason');
+  reasonField.setAttribute('placeholder', 'Reason');
 
   var decorationPanel = outerPanel
       .getElementsByClassName('modalDecorationPanel')[0];
@@ -139,17 +139,17 @@ function banSinglePost(innerPart, boardUri, thread, post, global) {
 
   var reasonField = document.createElement('input');
   reasonField.type = 'text';
-  reasonField.setAttribute('placeholder', 'reason');
+  reasonField.setAttribute('placeholder', 'Reason');
   decorationPanel.insertBefore(reasonField, okButton.parentNode);
 
   var durationField = document.createElement('input');
   durationField.type = 'text';
-  durationField.setAttribute('placeholder', 'duration');
+  durationField.setAttribute('placeholder', 'Duration');
   decorationPanel.insertBefore(durationField, okButton.parentNode);
 
   var messageField = document.createElement('input');
   messageField.type = 'text';
-  messageField.setAttribute('placeholder', 'message');
+  messageField.setAttribute('placeholder', 'Message');
   decorationPanel.insertBefore(messageField, okButton.parentNode);
 
   var typeCombo = document.createElement('select');
@@ -177,7 +177,7 @@ function banSinglePost(innerPart, boardUri, thread, post, global) {
   deletionCombo.selectedIndex = +localStorage.autoDeletionOption;
 
   var captchaField = outerPanel.getElementsByClassName('modalAnswer')[0];
-  captchaField.setAttribute('placeholder', 'answer (only for board staff)');
+  captchaField.setAttribute('placeholder', 'Answer (only for board staff)');
 
   okButton.onclick = function() {
 
@@ -293,11 +293,11 @@ function editPost(board, thread, post) {
       var subjectField = document.createElement('input');
       subjectField.type = 'text';
       subjectField.value = data.subject || '';
-      subjectField.setAttribute('placeholder', 'subject');
+      subjectField.setAttribute('placeholder', 'Subject');
       decorationPanel.insertBefore(subjectField, okButton.parentNode);
 
       var messageArea = document.createElement('textarea');
-      messageArea.setAttribute('placeholder', 'message');
+      messageArea.setAttribute('placeholder', 'Message');
       messageArea.defaultValue = data.message || '';
       decorationPanel.insertBefore(messageArea, okButton.parentNode);
 

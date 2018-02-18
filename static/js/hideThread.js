@@ -20,3 +20,7 @@ function toggleBoxes() {
         x.style.display = "none";
     }
 }
+
+function returnToPage() {
+    window.history.back();
+}

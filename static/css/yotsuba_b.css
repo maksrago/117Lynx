@@ -68,7 +68,7 @@ hr {
   border-color: #B7C5D9;
 }
 
-#labelName, #labelDescription {
+#labelName, #labelDescription, .catalogText {
   color: #AF0A0F;
 } 
 

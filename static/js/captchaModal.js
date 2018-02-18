@@ -41,7 +41,7 @@ function getCaptchaModal(header, noCaptcha) {
 
     var captchaField = document.createElement('input');
     captchaField.type = 'text';
-    captchaField.setAttribute('placeHolder', 'answer');
+    captchaField.setAttribute('placeHolder', 'Answer');
     captchaField.className = 'modalAnswer';
     decorationPanel.appendChild(captchaField);
   }

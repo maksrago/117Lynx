@@ -677,3 +677,8 @@ div.tableOutside p {
 .originalNameLink {
   text-decoration: underline;
 }
+
+#divTools {
+  margin-bottom: -4px;
+  margin-top: -3px;
+}
