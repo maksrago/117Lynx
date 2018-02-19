@@ -17,10 +17,6 @@
   margin: 1em;
 }
 
-.post-table td {
-  padding-bottom: 0.25em;
-}
-
 #quick-reply {
   position: fixed;
   float: right;

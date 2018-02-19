@@ -236,6 +236,10 @@ nav span, nav a {
   content: "\e003";
 }
 
+#closeWatcherMenuButton::before, .close-btn::before, .watchedCellCloseButton::before {
+  content: '\e0db';
+}
+
 /* board list */
 #divPages {
   display: inline-block;

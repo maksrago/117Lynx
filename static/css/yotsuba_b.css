@@ -36,7 +36,7 @@ nav {
 }
 #quick-reply table {
     background-color: #D6DAF0;
-    border: none;
+    border: 1px solid #000;
 }
 #quick-reply table {
     padding: 0em;

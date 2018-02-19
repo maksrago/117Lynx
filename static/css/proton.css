@@ -38,6 +38,7 @@ nav { /* Top navigation bar */
     background-color: #EEEEEE;
     color: #000;
 }
+
 .labelId {
     text-shadow: none;
 }
@@ -62,6 +63,14 @@ nav { /* Top navigation bar */
 #divLatestPosts .latestPostCell {
     background: #DDDDDD;
     border: 1px solid #DDDDDD;
+}
+
+#quick-reply table {
+  background: #EEEEEE;
+}
+
+#quick-reply th {
+  background: #CCC;
 }
 
 hr {

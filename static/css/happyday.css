@@ -47,14 +47,13 @@ nav {
     background-color: transparent;
 }
 #quick-reply table {
-    background-color: #D6DAF0;
-    border: none;
+    background-color: #eef8f0;
 }
 #quick-reply table {
     padding: 0em;
 }
 #quick-reply th {
-    background-color: #9988EE;
+    background-color: #d6f0da;
 }
 #divLatestPosts .latestPostCell {
     background: #F0E0D6;

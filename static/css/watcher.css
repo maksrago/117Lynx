@@ -4,6 +4,7 @@
 
 #closeWatcherMenuButton::before, .close-btn::before,
   .watchedCellCloseButton::before {
+  font-family: 'Icons';
   content: '\e0db';
 }
 
