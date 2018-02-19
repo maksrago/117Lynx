@@ -35,6 +35,7 @@
   width: 100%;
   text-align: right;
   display: inline-block;
+  font-weight: bold;
 }
 
 #divBoards {
@@ -65,4 +66,8 @@
   width: 33%;
   text-align: center;
   display: inherit;
+}
+
+.linkBoard {
+  font-weight: bold;
 }

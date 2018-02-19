@@ -122,7 +122,7 @@ function setFullBorder(tooltip) {
 
   innerPost.style['border-style'] = 'solid';
   innerPost.style['border-width'] = '1px';
-  innerPost.style['border-color'] = '#red';
+  innerPost.style['border-color'] = 'black';
 }
 
 function processQuote(quote, backLink) {

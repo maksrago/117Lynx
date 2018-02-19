@@ -1,3 +1,7 @@
 body {
   clear: both;
 }
+
+.footerOverboard {
+  clear: inherit;
+}

@@ -541,7 +541,7 @@ footer {
 }
 
 #divBoards {
-  font-size: 12pt;
+  font-size: 11pt;
 }
 
 #postingForm button, #qrbutton {
@@ -560,10 +560,6 @@ footer {
 
 .tempRefreshLynx {
   display: none;
-}
-
-.footerOverboard {
-   padding-top: 200px;
 }
 
 .tableOutside {
