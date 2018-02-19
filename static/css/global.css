@@ -646,7 +646,6 @@ div.tableOutside p {
 .linkBoxes ul {
   display: table;
   margin: auto;
-  width: 500px;
   padding: 0;
 }
 
