@@ -41,6 +41,10 @@
   font-size: 100%;
 }
 
+.divMessage {
+  display: table;
+}
+
 .divPosts {
   margin: 1em 0;
 }
@@ -149,6 +153,7 @@
   max-width: 150px;
   max-height: 150px;
 }
+
 
 .multipleUploads .opUploadPanel, .multipleUploads .panelUploads {
   float: left;
