@@ -486,7 +486,7 @@ footer {
 }
 
 .topLinks, #bottomLinksCatalog, #topLinksOverboard, #bottomLinksOverboard {
-   padding-inline-start: 12px;
+   -webkit-padding-start: 12px;
 }
 
 #divMessage {
