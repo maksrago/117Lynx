@@ -277,6 +277,16 @@ span.spoiler {
   padding: 0 1px;
 }
 
+span.spoiler .redText {
+  color: #000;
+  background: #000;
+}
+
+span.spoiler .redText:hover {
+  color: #AF0A0F;
+  background: transparent;
+}
+
 .spoiler:hover {
   color: #c5c8c6;
   background: none;
