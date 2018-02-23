@@ -9,7 +9,28 @@
   href="/.static/css/global.css"
   type="text/css"
   rel="stylesheet" />
-<title>Help</title>
+<link
+  href="/.static/css/index.css"
+  type="text/css"
+  rel="stylesheet" />
+<link
+  href="/.static/css/watcher.css"
+  type="text/css"
+  rel="stylesheet" />
+<link
+  href="/.static/css/posting.css"
+  type="text/css"
+  rel="stylesheet" />
+
+<title>Contact</title>
+<meta charset="UTF-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0">
+<link
+  href="/.static/css/global.css"
+  type="text/css"
+  rel="stylesheet" />
 <!-- Matomo -->
 <script type="text/javascript">
   var _paq = _paq || [];
@@ -27,7 +48,6 @@
 <!-- End Matomo Code -->
 </head>
 <body>
-
 <nav>
     <span id="navLinkSpan"> <span>[</span> <a
         href="/"
@@ -57,123 +77,127 @@
       alt="logo" />
   </header>
 
-  <div id="staticPageWrapper">
-    <fieldset id="staticPageFieldset">
-      <legend>Help</legend>
+<center>
+<h1>Posting</h1>
+<p class="nonBoardSubText">Proper Posting Etiquette</p>
 
-      <h1>Tripcodes</h1>
-      <p>To use a tripcode, add a # in your name. After the #, add the
-        password for the tripcode.</p>
-      <p>The server will apply a hash to the password and display the hashed
-        password.</p>
-      <p>To use a secure tripcode, add ## in your name and a password. A
-        secure tripcode will generate a random text to be displayed that will
-        only be used if your password matches.</p>
+<div class = "gAnnounce">
+<p id="globalAnnouncement"></p>
+</div>
 
-      <h1>Role signature</h1>
-      <p>If you wish to display your global or board role when posting, you
-        can put #rs in your name, like a tripcode, case insensitive. This will
-        prevent you from using a tripcode.</p>
-      <p>You can also enable an always use role signature rule in your
-        account settings.</p>
+<div class = "tableOutside">
+<h2 class = "table_h2">How do I format text?</h2>
+      <h2 class = "inner_h2">Tags</h2>
+<ol style="list-style-type:none;">
+        <li>[spoiler]the game[/spoiler] -> <span class="spoiler">the game</span></li>
+        <li>**this also works** -> <span class="spoiler">this also works</span></li>
+        <li>==SRZ BIZNIZ== -> <span class="redText">SRZ BIZNIZ</span></li>
+        <li>''italics'' -> <em>italics</em></li>
+        <li>'''bold''' -> <strong>bold</strong></li>
+        <li>__underline__ -> <u>underline</u></li>
+        <li>~~strikethrough~~ -> <s>strikethrough</s></li>
+        <li>[aa] for japanese characters</li>
+        <li>[code] tags if enabled by board owner</p></li>
+</ol>
 
-      <h1>Markdown</h1>
-      <p>When posting you can use some tools that will enhance its text in
-        HTML.</p>
-<br \>
-      <h3>Greentext</h3>
-      <p>If you add a > in the start of a line, it will greentext the text
-        until it finds a new line.</p>
-      <br>
-      <p>Example:</p>
-      <p>
-        >le ebin upboat :^) -> <span class="greenText">>le ebin upboat
-          :^)</span>
-      </p>
 
-      <br>
+<hr>
 
-      <h3>Quote</h3>
+      <h2 class = "inner_h2">Quote</h2>
       <p>If you write >> and then a number to a posting, it will create a
         link to this post in the board you are posting and add a tooltip with
         the post preview if you have javascript enabled.</p>
-      <br>
-      <p>Example:</p>
-      <p>
-        >>50 ->
-        <a href="">>>50</a>
-      </p>
+      <u><p>Example:</p></u>
+<ol style="list-style-type:none;">
+        </li>>>50 ->
+        <a href="">>>50</a></li>
+      </ol>
 
-      <br>
+<hr>
 
-      <h3>Board link</h3>
+      <h2 class = "inner_h2">Board link</h2>
       <p>If you write >>> and then add a board name between slashes, it will
         create a link to the board.</p>
-      <br>
-      <p>Example:</p>
-      <p>
-        >>>/cancer/ ->
+      <u><p>Example:</p></u>
+<ol style="list-style-type:none;">
+        <li>>>>/cancer/ ->
         <a
           href=""
-          class="quoteLink">>>>/cancer/</a>
-      </p>
+          class="quoteLink">>>>/cancer/</a></li>
+</ol>
 
-      <br>
+<hr>
 
-      <h3>Cross-quote</h3>
+      <h2 class = "inner_h2">Cross-quote</h2>
       <p>It is also possible to quote posts from another boards. Just add
         the posting number after the board name.</p>
-      <br>
-      <p>Example:</p>
-      <p>
-        >>>/cancer/50 ->
+
+      <u><p>Example:</p></u>
+<ol style="list-style-type:none;">
+        <li>>>>/cancer/50 ->
         <a
           href=""
-          class="quoteLink">>>>/cancer/50</a>
-      </p>
+          class="quoteLink">>>>/cancer/50</a></li>
+</ol>
 
-      <br>
+<hr>
 
-      <h3>Tags</h3>
-      <p>
-        [spoiler]the game[/spoiler] -> <span class="spoiler">the game</span>
-      </p>
-      <p>
-        **this also works** -> <span class="spoiler">this also works</span>
-      </p>
-      <p>
-        ==SRZ BIZNIZ== -> <span class="redText">SRZ BIZNIZ</span>
-      </p>
-      <p>
-        ''italics'' -> <em>italics</em>
-      </p>
-      <p>
-        '''bold''' -> <strong>bold</strong>
-      </p>
-      <p>
-        __underline__ -> <u>underline</u>
-      </p>
-      <p>
-        ~~strikethrough~~ -> <s>strikethrough</s>
-      <p>
-      <p>[aa] for japanese characters</p>
-      <p>[code] tags if enabled by board owner</p>
+      <h2 class = "inner_h2">Greentext</h2>
+      <p>If you add a > in the start of a line, it will greentext the text
+        until it finds a new line.</p>
+      <u><p>Example:</p></u>      
+<ol style="list-style-type:none;">
+        <li>>le ebin upboat :^) -> <span class="greenText">>le ebin upboat
+          :^)</span></li>
+</ol>
+<hr>
 
-      <br>
-
-      <h3>Urls</h3>
+      <h2 class = "inner_h2">Urls</h2>
       <p>If you post a url starting with either http or https, it will
         automatically be linked.</p>
-      <br>
-      <p>Example:</p>
-      <p>
+
+      <u><p>Example:</p></u>
+<ol style="list-style-type:none;"><li>
         http://bot.net ->
-        <a href="">http://bot.net</a>
-      </p>
+        <a href="">http://bot.net</li>
+</ol>
 
-    </fieldset>
 
-  </div>
 
+<a id="faq5"></a><h2 class = "table_h2">What is <i>Sage</i>?</h2>
+<p>Typing "sage" into the email field when replying to a post will generate a reply without bumping the thread.</p>
+
+<a id="faq6"></a><h2 class = "table_h2">What is a tripcode?</h2>
+<p>By default posts are made anonymously on 117chan. However you may use the "name" field to establish an identity.</p>
+
+<ol style="I">
+<li>To use a tripcode, add a # in your name. After the #, add the password for the tripcode.</li>
+<li>The server will apply a hash to the password and display the hashed password.</li>
+<li>To use a secure tripcode, add ## in your name and a password. A secure tripcode will generate a random text to be displayed that will only be used if your password matches.</li> 
+</ol>
+
+<a id="faq7"></a><h2 class = "table_h2">What is a role signature?</h2>
+<p>If you wish to display your global or board role when posting, you can put #rs in your name, like a tripcode, case insensitive. This will prevent you from using a tripcode.
+
+You can also enable an always use role signature rule in your account settings.</p>
+
+</div>
+
+<div id="buttonType"></div>
+
+</center>
+
+<div class="footerBar" id="footerBarType" value="A"></div>
 </body>
+
+<script src="/.static/js/settings.js"></script>
+<script src="/.static/js/api.js"></script>
+<script src="/.static/js/themes.js"></script>
+<script src="/.static/js/draggable.js"></script>
+<script src="/.static/js/watcher.js"></script>
+<script src="/.static/js/favouriteBoards.js"></script>
+<script src="/.static/js/globalAnnouncement.js"></script>
+<script src="/.static/js/buttonInject.js"></script>
+<script src="/.static/js/footerInject.js"></script>
+
 </html>
