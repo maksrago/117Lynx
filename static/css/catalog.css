@@ -19,6 +19,7 @@
 .catalogCell .divMessage {
   margin: 0;
   font-size: 75%;
+  display: block;
 }
 
 #divTools {
