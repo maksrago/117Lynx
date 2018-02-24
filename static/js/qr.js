@@ -152,18 +152,18 @@ function setQr() {
   qrhtml += 'Quick Reply</span></th> </tr>';
 
   if (QRshowname) {
-    qrhtml += '<tr><td colspan="2"><input id="qrname" type="text" autocomplete="off"';
-    qrhtml += ' maxlength="35" autocomplete="off" placeholder="Name"></td> </tr>';
+    qrhtml += '<tr><td colspan="2"><input id="qrname" type="text"';
+    qrhtml += ' maxlength="35" placeholder="Name"></td> </tr>';
   }
 
   qrhtml += '<tr><td colspan="2">';
-  qrhtml += '<input id="qremail" type="text" maxlength="40" autocomplete="off"';
-  qrhtml += 'autocomplete="off" placeholder="Email">';
+  qrhtml += '<input id="qremail" type="text" maxlength="40"';
+  qrhtml += 'placeholder="Email">';
   qrhtml += '</td> </tr> ';
 
   qrhtml += '<tr><td colspan="2">';
-  qrhtml += '<input id="qrsubject" type="text" maxlength="100" autocomplete="off"';
-  qrhtml += 'autocomplete="off" placeholder="Subject ">';
+  qrhtml += '<input id="qrsubject" type="text" maxlength="100"';
+  qrhtml += 'placeholder="Subject ">';
   qrhtml += '</td>';
   qrhtml += '</tr>';
 
@@ -171,7 +171,7 @@ function setQr() {
   qrhtml += '</textarea></td></tr> ';
 
   qrhtml += '<tr><td colspan="2">';
-  qrhtml += '<input id="qrpassword" type="password" placeholder="Password"></td></tr>autocomplete="off"';
+  qrhtml += '<input id="qrpassword" type="password" placeholder="Password"></td></tr>';
 
   var noFlagDiv = document.getElementById('noFlagDiv');
 
