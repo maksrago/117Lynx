@@ -698,3 +698,25 @@ div.tableOutside p {
 #watcherButton {
   margin-left: -5px;
 }
+
+code .redText {
+  font-weight: unset;
+  font-size: 100%;
+  color: #c5c8c6;
+}
+
+code s, code em, code strong, code u, code span.spoiler {
+  text-decoration: none;
+  font-style: unset;
+  font-weight: unset;
+  color: unset;
+}
+
+code span.spoiler {
+  background: transparent;  
+}
+
+code span.spoiler .redText {
+  background: transparent;
+  color: #c5c8c6; 
+}

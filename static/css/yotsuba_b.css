@@ -91,3 +91,7 @@ hr {
 span.spoiler:hover {
   color: #000;
 }
+
+code .redText, code span.spoiler .redText {
+  color: #000000;
+}

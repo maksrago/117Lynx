@@ -125,3 +125,7 @@ a:hover, #watcherButton:hover {
     color:#FF3300!important;
   text-decoration: underline;
 }
+
+code .redText, code span.spoiler .redText {
+  color: #800000;
+}

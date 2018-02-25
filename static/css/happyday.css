@@ -128,3 +128,7 @@ a:hover, #watcherButton:hover {
 .linkBoxes a {
    color: #364041;
 }
+
+code .redText, code span.spoiler .redText {
+  color: #364041;
+}
